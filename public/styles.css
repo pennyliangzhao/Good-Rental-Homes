@@ -64,16 +64,16 @@ footer p {
     margin-right: 10px;
     color: #25C0AF;
     border: none;
-    width: 36px;
+    width: 25px;
     height: 36px;
     cursor: pointer;
     outline: none;
 }
 
 form.create-note {
-    position: relative;
+    position: initial;
     width: 480px;
-    margin: 30px auto 20px auto;
+    margin: 300px auto 20px auto;
     background: #fff;
     padding: 15px;
     border-radius: 7px;
@@ -90,7 +90,7 @@ form.create-note textarea {
     resize: none;
 }
 form.create-note button {
-    position: absolute;
+    position: initial;
     right: 18px;
     bottom: -18px;
     background: #25C0AF;
