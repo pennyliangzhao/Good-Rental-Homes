@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
-import CreateArea from "./CreateArea";
 import DefaultNotes from "../notes";
+import "./App.css";
 
 function App() {
     const [notes, setNotes] = useState([]);
@@ -25,6 +25,19 @@ function App() {
     return (
         <div>
             <Header/>
+            <div className="firstOptions">
+                <section>
+                    <article>
+                        <p>Would you like to submit this form anonymously? [Yes/No] </p>
+                    </article>
+                    <article>
+                        <p>What dates were you at the property? [Start Date] [End Date] </p>
+                    </article>
+                    <article>
+                        <p>Is your landlord part of a professional agency? [Yes/No] [OPTIONAL BOX] </p>
+                    </article>
+                </section>
+            </div>
             <div className="defaultNotes">
                 {DefaultNotes.map(item => (
                     <Note
@@ -34,25 +47,24 @@ function App() {
                         star={deleteNote}
                     />))}
             </div>
-            <div className="CreatArea">
-                <CreateArea onAdd={addNote}/>
-                {notes.map((noteItem, index) => {
-                    return (
-                        <div>
-                            <Note
-                                key={index}
-                                id={index}
-                                title={noteItem.title}
-                                content={noteItem.content}
-                                onDelete={deleteNote}
-                            />
-                        </div>
-                    );
-                })}
-            </div>
+
             <div className="contactMe">
-                <p>Contact me:- the tenant may choose to offer to beavailable to chat with othertenants thinking of
-                    renting from this landlord via a convenient messaging service.Or phone. see more below</p>
+                <section>
+                    <article>
+                        <h3>Overall comments about the landlord</h3>
+                        <textarea>
+                         Your other comments about the landlord
+                         </textarea>
+
+                    </article>
+                    <article>
+                        <p>Are you happy to be contacted by prospective tenants about the property?[YES/NO]
+                        </p>
+                    </article>
+                    <article>
+                       <button>Submit</button>
+                    </article>
+                </section>
             </div>
             <Footer/>
         </div>

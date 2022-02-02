@@ -1,0 +1,25 @@
+.firstOptions {
+    text-align: left;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+  article{
+    background: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+  .contactMe {
+      text-align: left;
+      display: flex;
+      flex-flow: row wrap;
+  }
+
+  .defaultNotes {
+      text-align: left;
+      display: flex;
+      flex-flow: column wrap;
+      flex: 500px;
+
+  }
