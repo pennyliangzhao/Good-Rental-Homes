@@ -25,6 +25,7 @@ function App() {
     return (
         <div>
             <Header/>
+            <body>
             <div className="firstOptions">
                 <section>
                     <article>
@@ -66,8 +67,11 @@ function App() {
                     </article>
                 </section>
             </div>
-            <Footer/>
+            </body>
+
+
         </div>
+
     );
 
 }
