@@ -3,29 +3,29 @@ const notes = [
         key: 1,
         title: "Communication",
         content:
-            "Q1.keeps Tenants informed when needed.How well did they keep you informed of any activities/visits?"
+            "1. How well did the landlord keep you informed of any activities/visits?"
     },
     {
         key: 2,
         title: "Discretion",
         content:
-            "Q2.respects tenants privacyHow well did they respect your privacy?"
+            "2. How well did the landlord respect your privacy?"
     },
     {
         key: 3,
         title: "Responsive",
         content:
-            "Q3.actioned requests in a timely manner."
+            "3. Did the landlord action requests in a timely manner?"
     },
     {
         key: 4,
-        title: "Compliance.",
+        title: "Compliance",
         content:
-            "Q4.complies with NZ Tenancy Act"
+            "4. Did the landlord comply with the Residential Tenancies Act?"
     },
     {
         key: 5,
-        title: "Overall rating(score)",
+        title: "Overall Rating",
         content: ""
     }
 ];
