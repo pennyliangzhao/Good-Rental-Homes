@@ -4,7 +4,8 @@ import Footer from "./Footer";
 import Note from "./Note";
 import DefaultNotes from "../notes";
 import "./App.css";
-import Modal from"./Modal";
+import Modal from "./Modal";
+import CheckboxComponent from "./Checkbox"
 
 function App() {
     const [notes, setNotes] = useState([]);
@@ -30,13 +31,20 @@ function App() {
             <div className="firstOptions">
                 <section>
                     <article>
-                        <p>Would you like to submit this form anonymously? [Yes/No] </p>
+                        <div className="checkBoxQuestion">
+                            <p>Would you like to submit this form anonymously? </p>
+                            <CheckboxComponent/>
+                        </div>
                     </article>
                     <article>
                         <p>What dates were you at the property? [Start Date] [End Date] </p>
                     </article>
                     <article>
-                        <p>Is your landlord part of a professional agency? [Yes/No] [OPTIONAL BOX] </p>
+                        <div className="checkBoxQuestion">
+                            <p>Is your landlord part of a professional agency? </p>
+                            <CheckboxComponent/>
+                            <textarea/>
+                        </div>
                     </article>
                 </section>
             </div>
@@ -60,8 +68,11 @@ function App() {
 
                     </article>
                     <article>
-                        <p>Are you happy to be contacted by prospective tenants about the property?[YES/NO]
-                        </p>
+                        <div className="checkBoxQuestion">
+                            <p>Are you happy to be contacted by prospective tenants about the property?</p>
+                            <CheckboxComponent/>
+                        </div>
+
                     </article>
                     <article>
                         <button>Submit</button>
