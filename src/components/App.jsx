@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Note from "./Note";
 import DefaultNotes from "../notes";
 import "./App.css";
+import Modal from"./Modal";
 
 function App() {
     const [notes, setNotes] = useState([]);
@@ -63,7 +64,8 @@ function App() {
                         </p>
                     </article>
                     <article>
-                       <button>Submit</button>
+                        <button>Submit</button>
+                        <Modal/>
                     </article>
                 </section>
             </div>
