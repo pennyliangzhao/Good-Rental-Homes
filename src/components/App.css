@@ -21,9 +21,7 @@ article {
     display: flex;
     flex-flow: column wrap;
     flex: 500px;
-
 }
-
 
 body.active-modal {
     overflow-y: hidden;
@@ -83,3 +81,9 @@ body.active-modal {
 .copied_alert {
     color: red;
 }
+
+.checkBoxQuestion {
+    display: flex;
+}
+
+
