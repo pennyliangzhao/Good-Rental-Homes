@@ -7,7 +7,7 @@ import "./App.css";
 import Modal from "./Modal";
 import CheckboxComponent from "./Checkbox"
 import DateSelector from "./DateSelector"
-import Greeting from "./ConditionalTextfield";
+import CheckboxController from "./ConditionalTextfield";
 
 function App() {
     const [notes, setNotes] = useState([]);
@@ -40,17 +40,17 @@ function App() {
                     </article>
                     <article>
                         <div className="alignedQuestion">
-                        <p>What dates were you at the property?  </p>
+                        <p>What dates were you at the property?</p>
+                            <p>Start Date:</p>
                         <DateSelector/>
+                            <p>End Date:</p>
                             <DateSelector/>
                         </div>
                     </article>
                     <article>
                         <div className="alignedQuestion">
                             <p>Is your landlord part of a professional agency? </p>
-                            <CheckboxComponent/>
-                            <Greeting/>
-                            <textarea/>
+                            <CheckboxController/>
                         </div>
                     </article>
                 </section>
