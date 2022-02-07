@@ -6,6 +6,8 @@ import DefaultNotes from "../notes";
 import "./App.css";
 import Modal from "./Modal";
 import CheckboxComponent from "./Checkbox"
+import DateSelector from "./DateSelector"
+import Greeting from "./ConditionalTextfield";
 
 function App() {
     const [notes, setNotes] = useState([]);
@@ -31,18 +33,23 @@ function App() {
             <div className="firstOptions">
                 <section>
                     <article>
-                        <div className="checkBoxQuestion">
+                        <div className="alignedQuestion">
                             <p>Would you like to submit this form anonymously? </p>
                             <CheckboxComponent/>
                         </div>
                     </article>
                     <article>
-                        <p>What dates were you at the property? [Start Date] [End Date] </p>
+                        <div className="alignedQuestion">
+                        <p>What dates were you at the property?  </p>
+                        <DateSelector/>
+                            <DateSelector/>
+                        </div>
                     </article>
                     <article>
-                        <div className="checkBoxQuestion">
+                        <div className="alignedQuestion">
                             <p>Is your landlord part of a professional agency? </p>
                             <CheckboxComponent/>
+                            <Greeting/>
                             <textarea/>
                         </div>
                     </article>
@@ -68,7 +75,7 @@ function App() {
 
                     </article>
                     <article>
-                        <div className="checkBoxQuestion">
+                        <div className="alignedQuestion">
                             <p>Are you happy to be contacted by prospective tenants about the property?</p>
                             <CheckboxComponent/>
                         </div>
