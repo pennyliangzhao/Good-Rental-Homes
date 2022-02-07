@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 const CheckboxComponent = () => {
     const [checked, setChecked] = React.useState(false);
 
@@ -16,7 +15,6 @@ const CheckboxComponent = () => {
                 onChange={handleChange}
             />
 
-            {/*<p>Is "My Value" checked? {checked.toString()}</p>*/}
         </div>
     );
 };
