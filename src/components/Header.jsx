@@ -6,7 +6,7 @@ function Header() {
         <header>
             <h1>
                 <HighlightIcon />
-                RentalHomes
+                Rate Your Landlord
             </h1>
         </header>
     );
