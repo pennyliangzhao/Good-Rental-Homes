@@ -9,9 +9,12 @@ import DefaultNotes from "../notes";
 // import "./App.css";
 import DateSelector from "../DateSelector"
 import CheckboxController from "../ConditionalTextfield";
+import Map from "./Map.jsx";
+import withScriptjs from "react-google-maps/lib/withScriptjs";
 
 function Landlords() {
     const [notes, setNotes] = useState([]);
+    const MapLoader = withScriptjs(Map);
 
     function addNote(newNote) {
         setNotes(prevNotes => {
@@ -31,6 +34,12 @@ function Landlords() {
         <div>
             {/*<Header/>*/}
             <body>
+                <div id="map">
+                    <MapLoader
+                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2R2t03PiHkPhna_0HIxMZWXQxokn18W8&libraries=places"
+                        loadingElement={<div style={{ height: `100%` }} />}
+                    />
+                </div>
             <div className="firstOptions">
                 <section>
                     <article>
