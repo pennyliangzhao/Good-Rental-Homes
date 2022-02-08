@@ -14,14 +14,14 @@ function Cards() {
               text='Rate My Landlord
              (A previous tenant’s rating of a landlord)'
               label='Tenants'
-              path='/ratelandlord'
+              path='/rate-landlord'
             />
 
             <CardItem
                 src='images/img-4.svg'
                 text="Rate My Tenant (Previous Landlord's rating of the tenant)"
                 label='Landlords & Agencies'
-                path='/ratetenant'
+                path='/rate-tenant'
             />
           </ul>
           <ul className='cards__items'>
