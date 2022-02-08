@@ -30,7 +30,7 @@ function Landlords() {
 
     return (
         <div>
-            <Header/>
+            {/*<Header/>*/}
             <body>
             <div className="firstOptions">
                 <section>
