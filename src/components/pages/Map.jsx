@@ -70,7 +70,7 @@ class Map extends React.Component {
         ));
 
         return (
-            <div>
+            <div >
                 <PlacesAutocomplete
                     value={this.state.address}
                     onChange={this.handleChange}

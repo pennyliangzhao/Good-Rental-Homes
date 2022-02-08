@@ -116,7 +116,7 @@ class Map extends React.Component {
                     )}
                 </PlacesAutocomplete>
                 <GoogleMapExample
-                    containerElement={<div style={{ height: `500px`, width: '500px' }} />}
+                    containerElement={<div style={{ height: `200px`, width: '300px' }} />}
                     mapElement={<div style={{ height: `100%` }} />}
                 />
             </div>

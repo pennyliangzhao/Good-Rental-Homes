@@ -6,8 +6,9 @@ video {
     z-index: -1;
 }
 
+
 .home-container {
-    /*background: url('/images/img-10.svg') center center/cover no-repeat;*/
+    /*background: url('.idea/images/img-10.svg') center center/cover no-repeat;*/
     height: 100vh;
     width: 100%;
     display: flex;
@@ -20,14 +21,14 @@ video {
 
 .home-container > h1 {
     color: #fff;
-    font-size: 60px;
-    margin-top: -100px;
+    font-size: 40px;
+    margin-top: -20px;
 }
 
 .home-container > p {
     margin-top: 8px;
     color: #fff;
-    font-size: 32px;
+    font-size: 22px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
@@ -77,9 +78,6 @@ video {
     border: 1px solid var(--primary);
     transition: all 0.3s ease-out;
 }
-
-
-
 
 
 

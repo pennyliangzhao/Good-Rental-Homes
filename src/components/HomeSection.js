@@ -2,8 +2,12 @@ import React from 'react';
 import '../App.css';
 import {Button} from './Button';
 import './HomeSection.css';
+import Map from './Map'
+import withScriptjs from "react-google-maps/lib/withScriptjs";
 
 function HomeSection() {
+    const MapLoader = withScriptjs(Map);
+
     return (
         <div className='home-container'>
             <video src='/videos/video.mp4' autoPlay loop muted />
@@ -17,15 +21,22 @@ function HomeSection() {
                 >
                     GET STARTED
                 </Button>
-
-            </div>
-            <div className="input-group">
-                <input type="search" className="form-control rounded" placeholder="Search by location" aria-label="Search"
-                       aria-describedby="search-addon"/>
-                <button type="button" className="btn btn-outline-primary">search</button>
             </div>
 
+            {/*<div className="input-group">*/}
+                {/*<input type="search" className="form-control rounded" placeholder="Search by location" aria-label="Search"*/}
+                {/*       aria-describedby="search-addon"/>*/}
+                <div className="map" >
+                    <MapLoader
+                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2R2t03PiHkPhna_0HIxMZWXQxokn18W8&libraries=places"
+                        loadingElement={<div  style={{height: `100%` }}/>}
+                    />
+                </div>
+                {/*<button type="button" className="btn btn-outline-primary">search</button>*/}
+            {/*</div>*/}
         </div>
+
+
     );
 }
 
