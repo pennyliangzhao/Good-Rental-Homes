@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import './App.css';
 import { FaStar } from "react-icons/fa";
 
 /* adapted from https://github.com/iradualbert/star-ratings/blob/master/src/App.js **/

@@ -1,15 +1,18 @@
-import React, {useState} from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Note from "./Note";
+// import React from 'react';
+// import '../../App.css';
+//
+// export default function RateTenant() {
+//     return <h1 className='ratetenant'>RateTenant</h1>;
+// }
+import './RatePages.css';
+import React, {useState} from 'react';
 import DefaultNotes from "../notes";
-import "./App.css";
-import Modal from "./Modal";
-import CheckboxComponent from "./Checkbox"
-import DateSelector from "./DateSelector"
-import CheckboxController from "./ConditionalTextfield";
+import Modal from "../Modal";
+import CheckboxComponent from "../Checkbox";
+import Note from "../Note";
 
-function App() {
+function RateTenant() {
+    // return <h1 className='ratelandlord'> RateLandlord</h1>;
     const [notes, setNotes] = useState([]);
 
     function addNote(newNote) {
@@ -25,32 +28,25 @@ function App() {
             });
         });
     }
-
     return (
         <div>
-            <Header/>
             <body>
             <div className="firstOptions">
                 <section>
                     <article>
-                        <div className="alignedQuestion">
+                        <div className="checkBoxQuestion">
                             <p>Would you like to submit this form anonymously? </p>
                             <CheckboxComponent/>
                         </div>
                     </article>
                     <article>
-                        <div className="alignedQuestion">
-                        <p>What dates were you at the property?</p>
-                            <p>Start Date:</p>
-                        <DateSelector/>
-                            <p>End Date:</p>
-                            <DateSelector/>
-                        </div>
+                        <p>What dates were you at the property? [Start Date] [End Date] </p>
                     </article>
                     <article>
-                        <div className="alignedQuestion">
+                        <div className="checkBoxQuestion">
                             <p>Is your landlord part of a professional agency? </p>
-                            <CheckboxController/>
+                            <CheckboxComponent/>
+                            <textarea/>
                         </div>
                     </article>
                 </section>
@@ -75,7 +71,7 @@ function App() {
 
                     </article>
                     <article>
-                        <div className="alignedQuestion">
+                        <div className="checkBoxQuestion">
                             <p>Are you happy to be contacted by prospective tenants about the property?</p>
                             <CheckboxComponent/>
                         </div>
@@ -88,13 +84,8 @@ function App() {
                 </section>
             </div>
             </body>
-
-
         </div>
 
     );
-
 }
-
-
-export default App;
+export default RateTenant;
