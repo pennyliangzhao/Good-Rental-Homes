@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./App.css";
+import "./Modal.css";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 
@@ -31,7 +31,7 @@ export default function Modal() {
                         <div>
                             {url}
                             <CopyToClipboard text={url}
-                            onCopy={()=>setCopied(true)}>
+                                             onCopy={()=>setCopied(true)}>
                                 <button className="copy_btn">Copy</button>
                             </CopyToClipboard>
                             {copied ? <span className="copied_alert" >Copied.</span> : null}
