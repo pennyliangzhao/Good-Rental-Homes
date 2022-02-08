@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './SignInButton';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+
 import HighlightIcon from "@material-ui/icons/Highlight";
 
 function Navbar() {

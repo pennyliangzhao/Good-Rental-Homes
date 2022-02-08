@@ -32,7 +32,7 @@ function Landlords() {
 
     return (
         <div>
-            {/*<Header/>*/}
+            <Header/>
             <body>
                 <div id="map">
                     <MapLoader
