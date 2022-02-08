@@ -3,10 +3,8 @@ import React, {useState} from 'react';
 import Modal from "../Modal";
 import CheckboxComponent from "../Checkbox";
 import Header from "../Header";
-// import Footer from "../Footer";
 import Note from "../Note";
 import DefaultNotes from "../notes";
-// import "./App.css";
 import DateSelector from "../DateSelector"
 import CheckboxController from "../ConditionalTextfield";
 
