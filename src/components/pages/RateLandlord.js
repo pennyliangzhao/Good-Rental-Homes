@@ -10,6 +10,7 @@ import DefaultNotes from "../notes";
 import DateSelector from "../DateSelector"
 import CheckboxController from "../ConditionalTextfield";
 
+
 function Landlords() {
     const [notes, setNotes] = useState([]);
 

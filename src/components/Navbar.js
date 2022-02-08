@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from './SignInButton';
+// import { Button } from './SignInButton';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import "antd/dist/antd.css";
+import {PageHeader, Button } from 'antd';
+
 import HighlightIcon from "@material-ui/icons/Highlight";
 
 function Navbar() {
@@ -26,11 +29,10 @@ function Navbar() {
   window.addEventListener('resize', showButton);
 
   return (
-    <>
-      <nav className='navbar'>
+      <PageHeader className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <HighlightIcon />
+            <HighlightIcon/>
             Good Rental Homes
           </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -43,7 +45,6 @@ function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
-
               <Link
                   to='/tenants'
                   className='nav-links'
@@ -74,8 +75,8 @@ function Navbar() {
           {button && <Button buttonStyle='btn--outline'>SIGN IN</Button>}
 
         </div>
-      </nav>
-    </>
+      </PageHeader>
+
   );
 }
 

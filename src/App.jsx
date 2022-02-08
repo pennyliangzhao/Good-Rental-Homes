@@ -13,6 +13,8 @@ import RateTenant from "./components/pages/RateTenant";
 import RateNeighbour from "./components/pages/RateNeighbour";
 import Register from "./components/pages/Register";
 
+
+
 function App() {
     return (
         <>
