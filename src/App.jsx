@@ -20,14 +20,12 @@ function App() {
                 <Navbar />
                 <Routes>
                     <Route path='/' exact element={<Home/>} />
-                    <Route path='/landlords' element={<Landlords/>} />
-                    <Route path='/tenants' element={<Tenants/>} />
+                    <Route path='/rate-tenant' element={<RateTenant/>} />
+                    <Route path='/rate-landlord' element={<RateLandlord/>} />
                     <Route path='/sign-in' element={<SignIn/>} />
-                    <Route path='/ratelandlord' element={<RateLandlord/>} />
-                    <Route path='/rateathome' element={<RateAtHome/>} />
+					{/*<Route path='/rateathome' element={<RateAtHome/>} />
                     <Route path='/ratehouse' element={<RateHouse/>} />
-                    <Route path='/rateneighbour' element={<RateNeighbour/>} />
-                    <Route path='/ratetenant' element={<RateTenant/>} />
+                    <Route path='/rateneighbour' element={<RateNeighbour/>} />*/}
                     <Route path='/register' element={<Register/>} />
                 </Routes>
             </Router>
