@@ -3,13 +3,10 @@ import React, {useState} from 'react';
 import Modal from "../Modal";
 import CheckboxComponent from "../Checkbox";
 import Header from "../Header";
-// import Footer from "../Footer";
 import Note from "../Note";
 import DefaultNotes from "../notes";
-// import "./App.css";
 import DateSelector from "../DateSelector"
 import CheckboxController from "../ConditionalTextfield";
-
 
 function Landlords() {
     const [notes, setNotes] = useState([]);
@@ -30,71 +27,107 @@ function Landlords() {
 
     return (
         <div>
-            {/*<Header/>*/}
+            <Header/>
             <body>
-            <div className="firstOptions">
-                <section>
-                    <article>
-                        <div className="alignedQuestion">
-                            <p>Would you like to submit this form anonymously? </p>
+
+            <div className="container">
+                <form action="action_page.php">
+
+                    {/*----anonQuestion-START---------------------------------------------------------------------------*/}
+                    <div className="row">
+                        <div className="col-25">
+                            <label htmlFor="anonQuestion">Would you like to submit this form anonymously?</label>
+                        </div>
+                        <div className="col-75">
                             <CheckboxComponent/>
                         </div>
-                    </article>
-                    <article>
-                        <div className="alignedQuestion">
-                            <p>What dates were you at the property?</p>
+                    </div>
+                    {/*----anonQuestion-END-----------------------------------------------------------------------------*/}
+
+                    {/*----datesQuestion-START--------------------------------------------------------------------------*/}
+                    <div className="row">
+                        <div className="col-25">
+                            <label htmlFor="datesQuestion">What dates were you at the property?</label>
+                        </div>
+                        <div className="col-25">
                             <p>Start Date:</p>
                             <DateSelector/>
                             <p>End Date:</p>
                             <DateSelector/>
                         </div>
-                    </article>
-                    <article>
-                        <div className="alignedQuestion">
-                            <p>Is your landlord part of a professional agency? </p>
+                    </div>
+                    {/*----datesQuestion-END----------------------------------------------------------------------------*/}
+
+                    {/*----agencyQuestion-START-------------------------------------------------------------------------*/}
+                    <div className="row">
+                        <div className="col-25">
+                            <label htmlFor="agencyQuestion">Is your landlord part of a professional agency? </label>
+                        </div>
+                        <div className="row-25">
                             <CheckboxController/>
                         </div>
-                    </article>
-                </section>
-            </div>
-            <div className="defaultNotes">
-                {DefaultNotes.map(item => (
-                    <Note
-                        key={item.key}
-                        title={item.title}
-                        content={item.content}
-                        star={deleteNote}
-                    />))}
-            </div>
+                    </div>
+                    {/*----agencyQuestion-END---------------------------------------------------------------------------*/}
 
-            <div className="contactMe">
-                <section>
-                    <article>
-                        <h3>Overall comments about the landlord</h3>
-                        <textarea>
+
+                    {/*----ratings-START--------------------------------------------------------------------------------*/}
+                    <div className="defaultNotes">
+                        {DefaultNotes.map(item => (
+                            <Note
+                                key={item.key}
+                                title={item.title}
+                                content={item.content}
+                                star={deleteNote}
+                            />))}
+                    </div>
+                    {/*----ratings-END----------------------------------------------------------------------------------*/}
+
+
+
+                    {/*----overallComments-START------------------------------------------------------------------------*/}
+                    <div className="row">
+                        <div className="col-25">
+                            <label htmlFor="overallComments">Overall comments about the landlord</label>
+                        </div>
+                        <div className="col-75">
+                            <textarea>
                          Your other comments about the landlord
                          </textarea>
+                        </div>
+                    </div>
+                    {/*----overallComments-END--------------------------------------------------------------------------*/}
 
-                    </article>
-                    <article>
-                        <div className="alignedQuestion">
-                            <p>Are you happy to be contacted by prospective tenants about the property?</p>
+
+                    {/*----contactQuestion-START------------------------------------------------------------------------*/}
+                    <div className="row">
+                        <div className="col-25">
+                            <label htmlFor="contactQuestion">Are you happy to be contacted by prospective tenants
+                                about the property?</label>
+                        </div>
+                        <div className="col-25">
                             <CheckboxComponent/>
                         </div>
+                    </div>
+                    {/*----contactQuestion-END--------------------------------------------------------------------------*/}
 
-                    </article>
-                    <article>
-                        <button>Submit</button>
-                        <Modal/>
-                    </article>
-                </section>
+                    {/*----submitButton-START---------------------------------------------------------------------------*/}
+
+                    <button className="button" >Submit</button>
+
+                    {/*----submitButton-END-----------------------------------------------------------------------------*/}
+
+
+                </form>
             </div>
+
             </body>
 
 
         </div>
 
+
     );
 
 }
+
 export default Landlords;
