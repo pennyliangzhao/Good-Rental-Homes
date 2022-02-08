@@ -27,8 +27,8 @@
 
 .tenants {
     /*background-image: url('/images/img-1.svg');*/
-'images/img-8.svg'
-background-position: center;
+	'images/img-8.svg'
+	background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     font-size: 100px;
@@ -43,5 +43,3 @@ background-position: center;
     color: #fff;
     font-size: 100px;
 }
-
-

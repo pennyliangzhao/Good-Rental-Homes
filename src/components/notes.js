@@ -15,7 +15,7 @@ const notes = [
         key: 3,
         title: "Responsive",
         content:
-            "3. Did the landlord action requests in a timely manner?"
+            "3. Did the landlord address issues in a timely manner?"
     },
     {
         key: 4,
