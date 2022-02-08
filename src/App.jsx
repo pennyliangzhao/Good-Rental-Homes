@@ -13,8 +13,6 @@ import RateTenant from "./components/pages/RateTenant";
 import RateNeighbour from "./components/pages/RateNeighbour";
 import Register from "./components/pages/Register";
 
-
-
 function App() {
     return (
         <>
@@ -31,7 +29,6 @@ function App() {
                     <Route path='/rateneighbour' element={<RateNeighbour/>} />
                     <Route path='/ratetenant' element={<RateTenant/>} />
                     <Route path='/register' element={<Register/>} />
-
                 </Routes>
             </Router>
         </>
