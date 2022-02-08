@@ -29,14 +29,18 @@ function Landlords() {
       <div>
         <Header/>
         <body>
-        <div className="firstOptions">
-          <section>
-            <article>
-              <div className="alignedQuestion">
+        {/*<div className="firstOptions">*/}
+        {/*  <section>*/}
+        {/*    <article>*/}
+        {/*      <div className="alignedQuestion">*/}
+        <div className="container">
+            <form action="action_page.php">
+                <div className="row">
+                    <div className="col-25">
                 <p>Would you like to submit this form anonymously? </p>
                 <CheckboxComponent/>
               </div>
-            </article>
+            {/*</article>*/}
             <article>
               <div className="alignedQuestion">
                 <p>What dates were you at the property?</p>

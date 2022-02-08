@@ -247,36 +247,10 @@ input[type=submit] {
     clear: both;
 }
 
-/* Floating row for inputs: 25% width */
-.row-25 {
-    display: inline;
-    width: 25%;
-    margin-top: 6px;
-    height: 100px;
-    padding: 5px;
-
-}
-
-
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
         width: 100%;
         margin-top: 0;
     }
-}
-
-.button {
-    background-color: #25C0AF; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 40px;
-    height: 100px;
-    width: 200px;
-    border-radius: 15px;
-
 }
