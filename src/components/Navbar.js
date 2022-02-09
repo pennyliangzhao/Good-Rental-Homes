@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-// import { Button } from './SignInButton';
+import { Button } from './SignInButton';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import "antd/dist/antd.css";
-import {PageHeader, Button } from 'antd';
+import {PageHeader } from 'antd';
+
 
 import HighlightIcon from "@material-ui/icons/Highlight";
 
@@ -37,6 +38,7 @@ function Navbar() {
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+            ...
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
