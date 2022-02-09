@@ -36,7 +36,7 @@ function FlexStars() {
                     return (
                         <FaStar
                             key={index}
-                            size={24}
+                            size={36}
                             onClick={() => handleClick(index + 1)}
                             onMouseOver={() => handleMouseOver(index + 1)}
                             onMouseLeave={handleMouseLeave}
