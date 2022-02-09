@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import {Button} from './Button';
 import './HomeSection.css';
-import Map from './Map'
+import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
 
 function HomeSection() {

@@ -1,4 +1,4 @@
-const notes = [
+const landlordQuestionnaires = [
     {
         key: 1,
         title: "Communication",
@@ -26,8 +26,8 @@ const notes = [
     {
         key: 5,
         title: "Overall Rating",
-        content: ""
+        content: " "
     }
 ];
 
-export default notes;
+export default landlordQuestionnaires;

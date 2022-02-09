@@ -6,7 +6,7 @@
 // }
 import './RatePages.css';
 import React, {useState} from 'react';
-import DefaultNotes from "../notes";
+import DefaultNotes from "../NeighbourQuestionnaires";
 import Modal from "../Modal";
 import CheckboxComponent from "../Checkbox";
 import Note from "../Note";
