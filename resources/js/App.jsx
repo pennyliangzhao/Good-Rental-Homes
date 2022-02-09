@@ -10,6 +10,8 @@ import RateAtHome from "./components/pages/RateAtHome";
 import RateHouse from "./components/pages/RateHouse";
 import RateNeighbour from "./components/pages/RateNeighbour";
 import Register from "./components/pages/Register";
+import ReactDOM from "react-dom";
+import Example from "./components/Example";
 
 function App() {
     return (
@@ -32,3 +34,7 @@ function App() {
 }
 
 export default App;
+
+if (document.getElementById('App')) {
+    ReactDOM.render(<App />, document.getElementById('App'));
+}
