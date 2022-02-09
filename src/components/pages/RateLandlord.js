@@ -50,9 +50,11 @@ function Landlords() {
                             <label htmlFor="datesQuestion">What dates were you at the property?</label>
                         </div>
                         <div className="col-25">
-                            <p>Start Date:</p>
+                            <label htmlFor="startDate">Start Date:</label>
+                            <div className="dateSelector">
                             <DateSelector/>
-                            <p>End Date:</p>
+                            </div>
+                            <label htmlFor="endDate">End Date:</label>
                             <DateSelector/>
                         </div>
                     </div>
@@ -119,10 +121,7 @@ function Landlords() {
 
                 </form>
             </div>
-
             </body>
-
-
         </div>
 
 

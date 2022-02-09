@@ -21,6 +21,8 @@ article {
     display: flex;
     flex-flow: column wrap;
     flex: 500px;
+    width: 75%;
+
 }
 
 body.active-modal {
@@ -200,6 +202,7 @@ input[type=text], select, textarea{
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
+    font-size: 20px;
 }
 
 /* Style the label to display next to the inputs */
@@ -257,7 +260,6 @@ input[type=submit] {
 
 }
 
-
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
@@ -266,17 +268,29 @@ input[type=submit] {
     }
 }
 
+.button:hover {
+    /*border-width: 250px;*/
+    transform: scale(1.25);
+    border-color: #1f98f4;
+
+}
+
 .button {
     background-color: #25C0AF; /* Green */
-    border: none;
+    border: #1f98f4;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 40px;
-    height: 100px;
-    width: 200px;
-    border-radius: 15px;
+    font-size: 32px;
+    height: 90px;
+    width: 180px;
+    border-radius: 20px;
+
+}
+
+.dateSelector {
+    font-size: 50px;
 
 }
