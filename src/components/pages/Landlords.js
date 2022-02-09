@@ -9,6 +9,8 @@ import DefaultNotes from "../notes";
 // import "./App.css";
 import DateSelector from "../DateSelector"
 import CheckboxController from "../ConditionalTextfield";
+import "antd/dist/antd.css";
+import { PageHeader, Button } from 'antd';
 
 function Landlords() {
   const [notes, setNotes] = useState([]);
@@ -29,7 +31,12 @@ function Landlords() {
 
   return (
       <div>
-        <Header/>
+        <PageHeader
+            ghost={false}
+            onBack={() => window.history.back()}
+            title="Good Rental Homes"
+        >
+        </PageHeader>
         <body>
         <div className="firstOptions">
           <section>

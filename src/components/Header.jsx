@@ -10,14 +10,6 @@ function Header() {
             ghost={false}
             onBack={() => window.history.back()}
             title="Good Rental Homes"
-            subTitle="Rating the landlord"
-            extra={[
-                <Button key="3">Tenant</Button>,
-                <Button key="2">Tenancy</Button>,
-                <Button key="1" type="primary">
-                    Landlord
-                </Button>,
-            ]}
         >
         </PageHeader>
     );
