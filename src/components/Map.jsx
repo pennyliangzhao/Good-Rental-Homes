@@ -70,7 +70,7 @@ class Map extends React.Component {
         ));
 
         return (
-            <div>
+            <div >
                 <PlacesAutocomplete
                     value={this.state.address}
                     onChange={this.handleChange}
@@ -116,7 +116,7 @@ class Map extends React.Component {
                     )}
                 </PlacesAutocomplete>
                 <GoogleMapExample
-                    containerElement={<div style={{ height: `200px`, width: '300px' }} />}
+                    containerElement={<div style={{ height: `200px`, width: '400px' }} />}
                     mapElement={<div style={{ height: `100%` }} />}
                 />
             </div>

@@ -29,19 +29,19 @@ function Cards() {
               src='images/img-3.svg'
               text='Rate My Neighbour (A neighbor’s rating of the tenant)'
               label='Tenants'
-              path='/rateneighbour'
+              path='/rate-neighbour'
             />
             <CardItem
                 src='images/img-2.svg'
                 text='Rate my Flat (Feedback rating on the dwelling)'
                 label='Tenants'
-                path='/ratehouse'
+                path='/rate-house'
             />
             <CardItem
               src='images/img-8.svg'
               text='Rate me at home (A domestic reference. For use by tenants who have never rented before)'
               label='Tenants'
-              path='/rateathome'
+              path='/rate-at-home'
             />
           </ul>
         </div>
