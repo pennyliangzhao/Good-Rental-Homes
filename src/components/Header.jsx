@@ -1,14 +1,17 @@
 import React from "react";
 import HighlightIcon from "@material-ui/icons/Highlight";
+import "antd/dist/antd.css";
+import { PageHeader, Button } from 'antd';
+
 
 function Header() {
     return (
-        <header>
-            <h1>
-                <HighlightIcon />
-                Rate Your Landlord
-            </h1>
-        </header>
+        <PageHeader
+            ghost={false}
+            onBack={() => window.history.back()}
+            title="Good Rental Homes"
+        >
+        </PageHeader>
     );
 }
 
