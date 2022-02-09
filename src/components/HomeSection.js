@@ -4,7 +4,7 @@ import './HomeSection.css';
 import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
 import "antd/dist/antd.css";
-import { PageHeader, Button } from 'antd';
+import {Button} from './Button';
 
 function HomeSection() {
     const MapLoader = withScriptjs(Map);
