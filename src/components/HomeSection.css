@@ -28,7 +28,7 @@ video {
 .home-container > p {
     margin-top: 8px;
     color: #fff;
-    font-size: 22px;
+    font-size: 32px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
@@ -78,6 +78,9 @@ video {
     border: 1px solid var(--primary);
     transition: all 0.3s ease-out;
 }
+
+
+
 
 
 
