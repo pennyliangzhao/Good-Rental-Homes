@@ -1,5 +1,5 @@
 // import React from 'react';
-// import '../../App.css';
+// import '../../ReactApp.css';
 //
 // export default function RateNeighbour() {
 //     return <h1 className='rateneighbour'> RateNeighbour</h1>;

@@ -1,5 +1,5 @@
 // import React from 'react';
-// import '../../App.css';
+// import '../../ReactApp.css';
 //
 // export default function RateAtHome() {
 //     return <h1 className='rateathome'>RateAtHome</h1>;
