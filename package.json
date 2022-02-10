@@ -32,6 +32,7 @@
         "react-google-maps": "^9.4.5",
         "react-icons": "^4.3.1",
         "react-places-autocomplete": "^7.3.0",
-        "react-router-dom": "^6.2.1"
+        "react-router-dom": "^6.2.1",
+        "react-share": "^4.4.0"
     }
 }
