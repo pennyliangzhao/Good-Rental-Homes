@@ -9,7 +9,7 @@ function Header() {
         <PageHeader
             ghost={false}
             onBack={() => window.history.back()}
-            title="Good Rental Homes"
+            title="Rate Landlord"
         >
         </PageHeader>
     );
