@@ -24,3 +24,17 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# From Laravel .gitignore
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+/.vscode
+
