@@ -7,9 +7,14 @@ import Note from "../Note";
 import DefaultNotes from "../notes";
 import DateSelector from "../DateSelector"
 import CheckboxController from "../ConditionalTextfield";
+import "antd/dist/antd.css";
+import { PageHeader, Button } from 'antd';
+import Map from './Map';
+import withScriptjs from "react-google-maps/lib/withScriptjs";
 
 function Landlords() {
     const [notes, setNotes] = useState([]);
+    const MapLoader = withScriptjs(Map);
 
     function addNote(newNote) {
         setNotes(prevNotes => {
@@ -27,9 +32,22 @@ function Landlords() {
 
     return (
         <div>
-            <Header/>
+            <div className="pageHeader">
+            <PageHeader className="pageheader"
+                ghost={false}
+                onBack={() => window.history.back()}
+                title="Rate Landlord"
+            >
+            </PageHeader>
+            </div>
             <body>
-
+                <label htmlFor="anonQuestion">What is the address of the property</label>
+                <div className="map" >
+                    <MapLoader
+                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2R2t03PiHkPhna_0HIxMZWXQxokn18W8&libraries=places"
+                        loadingElement={<div  style={{height: `100%` }}/>}
+                    />
+                </div>
             <div className="container">
                 <form action="action_page.php">
 
