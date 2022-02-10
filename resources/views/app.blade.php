@@ -10,7 +10,7 @@
     <script src="../js/app.js" defer></script>
 </head>
 <body>
-<<div id="ReactApp"></div>
+<div id="ReactApp"></div>
 
 </body>
 </html>
