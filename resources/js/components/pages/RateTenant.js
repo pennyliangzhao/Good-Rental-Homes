@@ -7,7 +7,6 @@
 import './RatePages.css';
 import React, {useState} from 'react';
 import DefaultNotes from "../TenantQuestionnaires";
-import Modal from "../Modal";
 import CheckboxComponent from "../Checkbox";
 import Note from "../Note";
 import "antd/dist/antd.css";
@@ -99,7 +98,7 @@ function RateTenant() {
                     </article>
                     <article>
                         <button>Submit</button>
-                        <Modal/>
+
                     </article>
                 </section>
             </div>
