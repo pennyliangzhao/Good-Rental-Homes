@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
     withGoogleMap,
-    withScriptjs,
     GoogleMap,
     Marker,
     InfoWindow

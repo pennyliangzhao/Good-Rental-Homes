@@ -1,12 +1,8 @@
 import React from "react";
 import FlexStars from "./Stars";
-import "./Note.css"
+import "../../css/Note.css"
 
 function Note(props) {
-    function handleClick() {
-        props.onDelete(props.id);
-    }
-
     return (
 
         <div className="note">
@@ -14,7 +10,7 @@ function Note(props) {
                 <h1>{props.title}</h1>
             </div>
             <p>{props.content}</p>
-                <FlexStars></FlexStars>
+                <FlexStars />
         </div>
     );
 }

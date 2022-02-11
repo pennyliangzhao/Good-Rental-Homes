@@ -6,7 +6,6 @@ import { FaStar } from "react-icons/fa";
 const colors = {
     orange: "#FFBA5A",
     grey: "#a9a9a9"
-
 };
 
 function FlexStars() {
@@ -52,7 +51,7 @@ function FlexStars() {
 
         </div>
     );
-};
+}
 
 
 const styles = {

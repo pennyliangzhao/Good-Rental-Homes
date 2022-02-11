@@ -1,25 +1,12 @@
-// import React from 'react';
-// import '../../ReactApp.css';
-//
-// export default function RateNeighbour() {
-//     return <h1 className='rateneighbour'> RateNeighbour</h1>;
-// }
-import './RatePages.css';
+import '../../css/RatePages.css';
 import React, {useState} from 'react';
-import DefaultNotes from "../NeighbourQuestionnaires";
-import Modal from "../Modal";
-import CheckboxComponent from "../Checkbox";
-import Note from "../Note";
+import DefaultNotes from "../Components/NeighbourQuestionnaire";
+import Modal from "../Components/Modal";
+import CheckboxComponent from "../Components/Checkbox";
+import Note from "../Components/Note";
 
 function RateNeighbour() {
-    // return <h1 className='ratelandlord'> RateLandlord</h1>;
     const [notes, setNotes] = useState([]);
-
-    function addNote(newNote) {
-        setNotes(prevNotes => {
-            return [...prevNotes, newNote];
-        });
-    }
 
     function deleteNote(id) {
         setNotes(prevNotes => {

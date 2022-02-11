@@ -1,4 +1,4 @@
-const landlordQuestionnaires = [
+const neighbourQuestionnaire = [
     {
         key: 1,
         title: "Friendliness",
@@ -35,4 +35,4 @@ const landlordQuestionnaires = [
     }
 ];
 
-export default landlordQuestionnaires;
+export default neighbourQuestionnaire;

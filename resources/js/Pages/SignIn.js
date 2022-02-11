@@ -1,11 +1,7 @@
 import React from 'react';
-import '../../App.css';
-import Footer from '../Footer';
-import './SignInstyle.css';
-
-// export default function SignIn() {
-//     return <h1 className='sign-in'>SIGN IN</h1>;
-// }
+import '../../css/App.css';
+import Footer from '../Components/Footer';
+import '../../css/SignInstyle.css';
 
 function SignIn() {
     return (
@@ -13,7 +9,7 @@ function SignIn() {
             <div className="header">Sign In</div>
             <div className="content">
                 <div className="image">
-                    <img src='images/img-5.svg' />
+                    <img src='../../../public/images/img-5.svg' />
                 </div>
                 <div className="form">
                     <div className="form-group">

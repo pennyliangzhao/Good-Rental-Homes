@@ -1,4 +1,4 @@
-const landlordQuestionnaires = [
+const rateHouseQuestionnaire = [
     {
         key: 1,
         title: "Accuracy",
@@ -52,4 +52,4 @@ const landlordQuestionnaires = [
 ];
 
 
-export default landlordQuestionnaires;
+export default rateHouseQuestionnaire;

@@ -5,7 +5,7 @@ function CheckboxController() {
     return (
         <div className="Greeting">
 
-            <input type="checkbox" onClick={() => setIsToggled(!isToggled)}></input>
+            <input type="checkbox" onClick={() => setIsToggled(!isToggled)}/>
             { isToggled &&
                 <textarea>
                     Please enter the name of the agency

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./Modal.css";
+import "../../css/Modal.css";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 
@@ -20,12 +20,12 @@ export default function Modal() {
     return (
         <>
             <button onClick={toggleModal} className="btn-modal">
-                <i className="fa fa-share-alt"></i>
+                <i className="fa fa-share-alt"/>
             </button>
 
             {modal && (
                 <div className="modal">
-                    <div onClick={toggleModal} className="overlay"></div>
+                    <div onClick={toggleModal} className="overlay"/>
                     <div className="modal-content">
                         <h2>Invite other tenants</h2>
                         <div>

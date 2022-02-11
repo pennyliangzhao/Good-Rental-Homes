@@ -1,17 +1,16 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import './App.css';
-import Home from './components/pages/Home';
+import Navbar from './Components/Navbar';
+import '../css/App.css';
+import Home from './Pages/Home';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import SignIn from './components/pages/SignIn';
-import RateLandlord from "./components/pages/RateLandlord";
-import RateTenant from "./components/pages/RateTenant";
-import RateAtHome from "./components/pages/RateAtHome";
-import RateHouse from "./components/pages/RateHouse";
-import RateNeighbour from "./components/pages/RateNeighbour";
-import Register from "./components/pages/Register";
+import SignIn from './Pages/SignIn';
+import RateLandlord from "./Pages/RateLandlord";
+import RateTenant from "./Pages/RateTenant";
+import RateAtHome from "./Pages/RateAtHome";
+import RateHouse from "./Pages/RateHouse";
+import RateNeighbour from "./Pages/RateNeighbour";
+import Register from "./Pages/Register";
 import ReactDOM from "react-dom";
-import Example from "./components/Example";
 
 function ReactApp() {
     return (

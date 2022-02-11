@@ -1,29 +1,16 @@
-// import React from 'react';
-// import '../../ReactApp.css';
-//
-// export default function RateTenant() {
-//     return <h1 className='ratetenant'>RateTenant</h1>;
-// }
-import './RatePages.css';
+import '../../RatePages.css';
 import React, {useState} from 'react';
-import DefaultNotes from "../TenantQuestionnaires";
-import CheckboxComponent from "../Checkbox";
-import Note from "../Note";
+import DefaultNotes from "../Components/TenantQuestionnaire";
+import CheckboxComponent from "../Components/Checkbox";
+import Note from "../Components/Note";
 import "antd/dist/antd.css";
-import { PageHeader, Button } from 'antd';
-import Map from './Map';
+import { PageHeader } from 'antd';
+import Map from '../Components/Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
 
 function RateTenant() {
-    // return <h1 className='ratelandlord'> RateLandlord</h1>;
     const [notes, setNotes] = useState([]);
     const MapLoader = withScriptjs(Map);
-
-    function addNote(newNote) {
-        setNotes(prevNotes => {
-            return [...prevNotes, newNote];
-        });
-    }
 
     function deleteNote(id) {
         setNotes(prevNotes => {

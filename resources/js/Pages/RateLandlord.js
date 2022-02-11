@@ -1,26 +1,18 @@
-import './RatePages.css';
+import '../../css/RatePages.css';
 import React, {useState} from 'react';
-import Modal from "../Modal";
-import CheckboxComponent from "../Checkbox";
-import Header from "../Header";
-import Note from "../Note";
-import DefaultNotes from "../notes";
-import DateSelector from "../DateSelector"
-import CheckboxController from "../ConditionalTextfield";
+import CheckboxComponent from "../Components/Checkbox";
+import Note from "../Components/Note";
+import DefaultNotes from "../Components/notes";
+import DateSelector from "../Components/DateSelector"
+import CheckboxController from "../Components/ConditionalTextfield";
 import "antd/dist/antd.css";
-import { PageHeader, Button } from 'antd';
+import { PageHeader } from 'antd';
 import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
 
 function Landlords() {
     const [notes, setNotes] = useState([]);
     const MapLoader = withScriptjs(Map);
-
-    function addNote(newNote) {
-        setNotes(prevNotes => {
-            return [...prevNotes, newNote];
-        });
-    }
 
     function deleteNote(id) {
         setNotes(prevNotes => {
@@ -49,7 +41,7 @@ function Landlords() {
                     />
                 </div>
             <div className="container">
-                <form action="action_page.php">
+                <form>
 
                     {/*----anonQuestion-START---------------------------------------------------------------------------*/}
                     <div className="row">
