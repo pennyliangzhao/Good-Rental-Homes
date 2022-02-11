@@ -45,6 +45,15 @@ class LLS_Controller extends Controller
             'end_date' => $request->get('end_date'),
             'communication' => $request->get('communication'),
             'discretion' => $request->get('discretion'),
+            'responsiveness' => $request->get('responsiveness'),
+            'compliance' => $request->get('compliance'),
+            'overall_rating' => $request->get('overall_rating'),
+            'overall_comment' => $request->get('overall_comment'),
+            'anonymous' => $request->get('anonymous'),
+            'contact' => $request->get('contact'),
+            'agency' => $request->get('agency'),
+            'agency_name' => $request->get('agency_name'),
+
         ]);
         $item->save();
         return response()->json('Successfully added');
@@ -71,6 +80,8 @@ class LLS_Controller extends Controller
     public function edit($id)
     {
         //
+        $item = Item::find($id);
+        return response()->json($item);
     }
 
     /**
@@ -83,6 +94,12 @@ class LLS_Controller extends Controller
     public function update(Request $request, $id)
     {
         //
+        $item = Item::find($id);
+        $item->name = $request->get('name');
+        $item->price = $request->get('price');
+        $item->save();
+
+        return response()->json('Successfully Updated');
     }
 
     /**
@@ -94,5 +111,9 @@ class LLS_Controller extends Controller
     public function destroy($id)
     {
         //
+        $item = Item::find($id);
+        $item->delete();
+
+        return response()->json('Successfully Deleted');
     }
 }
