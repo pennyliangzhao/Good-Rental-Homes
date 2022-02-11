@@ -20,7 +20,7 @@ export default function Modal() {
     return (
         <>
             <button onClick={toggleModal} className="btn-modal">
-                Share
+                <i className="fa fa-share-alt"></i>
             </button>
 
             {modal && (
