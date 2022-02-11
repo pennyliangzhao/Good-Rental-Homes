@@ -44,7 +44,7 @@ class LLS_Controller extends Controller
             'start_date' => $request->get('start_date'),
             'end_date' => $request->get('end_date'),
             'communication' => $request->get('communication'),
-            'property' => $request->get('property'),
+            'discretion' => $request->get('discretion'),
         ]);
         $item->save();
         return response()->json('Successfully added');
