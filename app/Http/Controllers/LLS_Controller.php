@@ -14,6 +14,8 @@ class LLS_Controller extends Controller
     public function index()
     {
         //
+        $items = Item::all();
+        return response()->json($items);
     }
 
     /**
@@ -24,6 +26,7 @@ class LLS_Controller extends Controller
     public function create()
     {
         //
+
     }
 
     /**
@@ -35,6 +38,16 @@ class LLS_Controller extends Controller
     public function store(Request $request)
     {
         //
+        $item = new Item([
+            'tenant' => $request->get('tenant'),
+            'property' => $request->get('property'),
+            'start_date' => $request->get('start_date'),
+            'end_date' => $request->get('end_date'),
+            'communication' => $request->get('communication'),
+            'property' => $request->get('property'),
+        ]);
+        $item->save();
+        return response()->json('Successfully added');
     }
 
     /**
@@ -46,6 +59,7 @@ class LLS_Controller extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
