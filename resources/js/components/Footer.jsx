@@ -4,7 +4,24 @@ import {Button} from './Button';
 import {Link} from 'react-router-dom';
 import HighlightIcon from "@material-ui/icons/Highlight";
 
+
+import {
+    FacebookShareButton,
+    WhatsappShareButton,
+    TwitterShareButton,
+    TwitterIcon,
+    WhatsappIcon,
+    FacebookIcon,
+    LinkedinShareButton,
+    LinkedinIcon,
+    EmailShareButton,
+    EmailIcon,
+
+} from 'react-share';
+import Modal from "./Modal";
+
 function Footer() {
+    const shareUrl = window.document.location.href;
     return (
         <div className='footer-container'>
             <section className='footer-subscription'>
@@ -54,7 +71,7 @@ function Footer() {
                     {/*</div>*/}
                     <div class='footer-link-items'>
                         <h2>Social Media</h2>
-                        <Link to='/'>Instagram9</Link>
+                        <Link to='/'>Instagram</Link>
                         <Link to='/'>Facebook</Link>
                         <Link to='/'>Youtube</Link>
                         <Link to='/'>Twitter</Link>
@@ -71,46 +88,42 @@ function Footer() {
                     </div>
                     <small class='website-rights'>GRH © 2022</small>
                     <div class='social-icons'>
-                        <Link
-                            class='social-icon-link facebook'
-                            to='/'
-                            target='_blank'
-                            aria-label='Facebook'
+                        <Modal/>
+                        <FacebookShareButton
+                            url={shareUrl}
+                            quote={'Send out your first Rate It today!'}
+                            hashtag={'#Good_Rental_Homes'}
                         >
-                            <i class='fab fa-facebook-f'/>
-                        </Link>
-                        <Link
-                            class='social-icon-link instagram'
-                            to='/'
-                            target='_blank'
-                            aria-label='Instagram'
+                            <FacebookIcon size={40} round={true} />
+                        </FacebookShareButton>
+                        <WhatsappShareButton
+                            url={shareUrl}
+                            quote={'Send out your first Rate It today!'}
+                            hashtag={'#Good_Rental_Homes'}
                         >
-                            <i class='fab fa-instagram'/>
-                        </Link>
-                        <Link
-                            class='social-icon-link youtube'
-                            to='/'
-                            target='_blank'
-                            aria-label='Youtube'
+                            <WhatsappIcon size={40} round={true} />
+                        </WhatsappShareButton>
+                        <TwitterShareButton
+                            url={shareUrl}
+                            quote={'Send out your first Rate It today!'}
+                            hashtag={'#Good_Rental_Homes'}
                         >
-                            <i class='fab fa-youtube'/>
-                        </Link>
-                        <Link
-                            class='social-icon-link twitter'
-                            to='/'
-                            target='_blank'
-                            aria-label='Twitter'
+                            <TwitterIcon size={40} round={true} />
+                        </TwitterShareButton>
+                        <LinkedinShareButton
+                            url={shareUrl}
+                            quote={'Send out your first Rate It today!'}
+                            hashtag={'#Good_Rental_Homes'}
                         >
-                            <i class='fab fa-twitter'/>
-                        </Link>
-                        <Link
-                            class='social-icon-link twitter'
-                            to='/'
-                            target='_blank'
-                            aria-label='LinkedIn'
+                            <LinkedinIcon size={40} round={true} />
+                        </LinkedinShareButton>
+                        <EmailShareButton
+                            url={shareUrl}
+                            quote={'Send out your first Rate It today!'}
+                            hashtag={'#Good_Rental_Homes'}
                         >
-                            <i class='fab fa-linkedin'/>
-                        </Link>
+                            <EmailIcon size={40} round={true} />
+                        </EmailShareButton>
                     </div>
                 </div>
             </section>

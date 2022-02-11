@@ -3,12 +3,14 @@ body.active-modal {
 }
 
 .btn-modal {
-    /*padding: 10px 20px;*/
-    margin-top: 10px;
-    margin-left: 5px;
-    display: block;
-    /*margin: 100px auto 0;*/
-    /*font-size: 18px;*/
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    font: inherit;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+
 }
 
 .modal, .overlay {
