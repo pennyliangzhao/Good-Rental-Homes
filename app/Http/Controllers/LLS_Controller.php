@@ -94,10 +94,10 @@ class LLS_Controller extends Controller
     public function update(Request $request, $id)
     {
         //
-        $item = Item::find($id);
-        $item->name = $request->get('name');
-        $item->price = $request->get('price');
-        $item->save();
+//        $item = Item::find($id);
+//        $item->name = $request->get('name');
+//        $item->price = $request->get('price');
+//        $item->save();
 
         return response()->json('Successfully Updated');
     }
