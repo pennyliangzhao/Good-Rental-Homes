@@ -13,5 +13,3 @@ require('./bootstrap');
  */
 
 require('./ReactApp');
-
-

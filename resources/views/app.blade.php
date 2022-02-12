@@ -5,13 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <script src="../js/app.js" defer></script>
+    <title>Welcome - Good Rental Homes</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="js/app.js" defer></script>
     <link
         href="https://fonts.googleapis.com/css?family=McLaren|Montserrat&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
     <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
