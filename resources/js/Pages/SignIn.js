@@ -1,18 +1,19 @@
 import React from 'react';
-import '../../css/App.css';
+import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import '../../css/SignInstyle.css';
 
 function SignIn() {
-    return (
+
+    {/* Update site title */}
+    useEffect(() => {
+        document.title = "Sign In - Good Rental Homes";
+    });
+
+	return (
         <>
             <div className="pageHeader">
-            <PageHeader className="pageheader"
-                ghost={false}
-                onBack={() => window.history.back()}
-                title="Rate Landlord"
-            >
-            </PageHeader>
+				<Header title="Sign In" />
             </div>
 
 			<div className="content">

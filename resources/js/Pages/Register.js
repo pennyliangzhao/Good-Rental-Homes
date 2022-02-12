@@ -1,12 +1,20 @@
 import React from 'react';
-import '../../css/App.css';
+import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import '../../css/SignInstyle.css';
 
 function Register() {
-    return (
+    
+	{/* Update site title */}
+    useEffect(() => {
+        document.title = "Register - Good Rental Homes";
+    });
+
+	return (
         <>
-            <div className="header">Register</div>
+            <div className="pageHeader">
+				<Header title="Register" />
+			</div>
                 <div className="content">
                     <div className="image">
                         <img src='images/img-7.svg' />
