@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
-import {Button} from './SignInButton';
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Button } from './SignInButton';
+import { Link } from 'react-router-dom';
 import '../../css/Navbar.css';
 import "antd/dist/antd.css";
 import HighlightIcon from "@material-ui/icons/Highlight";
