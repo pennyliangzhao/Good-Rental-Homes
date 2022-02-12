@@ -11,7 +11,7 @@ function HomeSection() {
 
     return (
         <div className='home-container'>
-            <video src='../../../public/videos/video.mp4' autoPlay loop muted />
+            <video src='videos/video.mp4' autoPlay loop muted />
             <h1>Empowering and Informing the Rental Community</h1>
             <p>Where good tenants find good homes and good landlords</p>
             <div className='hero-btns'>

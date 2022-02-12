@@ -9,7 +9,7 @@ function Register() {
             <div className="header">Register</div>
                 <div className="content">
                     <div className="image">
-                        <img src='../../../public/images/img-7.svg' />
+                        <img src='images/img-7.svg' />
                     </div>
                     <div className="form">
                         <div className="form-group">

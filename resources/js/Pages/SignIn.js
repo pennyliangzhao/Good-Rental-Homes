@@ -9,7 +9,7 @@ function SignIn() {
             <div className="header">Sign In</div>
             <div className="content">
                 <div className="image">
-                    <img src='../../../public/images/img-5.svg' />
+                    <img src='images/img-5.svg' />
                 </div>
                 <div className="form">
                     <div className="form-group">
