@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../Components/Header';
+import { Button } from '../Components/SignInButton';
 import Footer from '../Components/Footer';
 import '../../css/SignInstyle.css';
 
@@ -9,6 +10,8 @@ function SignIn() {
     useEffect(() => {
         document.title = "Sign In - Good Rental Homes";
     });
+
+	const [button, setButton] = useState(true);
 
 	return (
         <>
@@ -22,18 +25,18 @@ function SignIn() {
                 </div>
                 <div className="form">
                     <div className="form-group">
-                        <label htmlFor="username">Username</label>
-                        <input type="text" name="username" placeholder="username" />
+                        <label htmlFor="email">Email:</label>
+                        <input type="text" name="email" placeholder="Email" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name="password" placeholder="password" />
+                        <label htmlFor="password">Password:</label>
+                        <input type="password" name="password" placeholder="Password" />
                     </div>
-                    <div className="footer">
-                        <button type="button" className="btn">
-                            Login
-                        </button>
-                    </div>
+                    <div className="form-group">
+						<button type="button" className="button">
+							Sign In
+						</button>
+					</div>
                 </div>
             </div>
 
