@@ -1,4 +1,4 @@
-import '../../RatePages.css';
+import '../../css/RatePages.css';
 import React, {useState} from 'react';
 import DefaultNotes from "../Components/TenantQuestionnaire";
 import CheckboxComponent from "../Components/Checkbox";

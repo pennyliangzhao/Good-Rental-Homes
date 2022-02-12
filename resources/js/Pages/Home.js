@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.css';
+import '../../css/App.css';
 import Cards from '../Components/Cards';
 import HomeSection from '../Components/HomeSection';
 import Footer from '../Components/Footer';
