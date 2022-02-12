@@ -1,5 +1,6 @@
 import '../../css/RatePages.css';
 import React, { useState, useEffect } from 'react';
+import Header from "../Components/Header";
 import DefaultNotes from "../Components/RateAtHomeQuestionnaire";
 import Modal from "../Components/Modal";
 import CheckboxComponent from "../Components/Checkbox";
@@ -23,6 +24,9 @@ function RateAtHome() {
 
     return (
         <div>
+		    <div className="pageHeader">
+                <Header title="Rate at Home" />
+            </div>
             <body>
             <div className="firstOptions">
                 <section>

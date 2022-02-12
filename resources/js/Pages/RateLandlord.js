@@ -1,12 +1,12 @@
 import '../../css/RatePages.css';
 import React, { useState, useEffect } from 'react';
+import Header from "../Components/Header";
 import CheckboxComponent from "../Components/Checkbox";
 import Note from "../Components/Note";
 import DefaultNotes from "../Components/notes";
 import DateSelector from "../Components/DateSelector"
 import CheckboxController from "../Components/ConditionalTextfield";
 import "antd/dist/antd.css";
-import Header from "../Components/Header";
 import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
 

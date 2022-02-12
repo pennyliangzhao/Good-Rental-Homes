@@ -1,10 +1,10 @@
 import '../../css/RatePages.css';
 import React, { useState, useEffect } from 'react';
+import Header from "../Components/Header";
 import DefaultNotes from "../Components/TenantQuestionnaire";
 import CheckboxComponent from "../Components/Checkbox";
 import Note from "../Components/Note";
 import "antd/dist/antd.css";
-import { PageHeader } from 'antd';
 import Map from '../Components/Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
 

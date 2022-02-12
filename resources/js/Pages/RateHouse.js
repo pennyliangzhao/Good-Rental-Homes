@@ -1,5 +1,6 @@
 import '../../css/RatePages.css';
 import React, { useState, useEffect } from 'react';
+import Header from "../Components/Header";
 import DefaultNotes from "../Components/RateHouseQuestionnaire";
 import Modal from "../Components/Modal";
 import CheckboxComponent from "../Components/Checkbox";
@@ -18,11 +19,14 @@ function RateHouse() {
 
 	{/* Update site title */}
     useEffect(() => {
-        document.title = "Rate House - Good Rental Homes";
+        document.title = "Rate Dwelling - Good Rental Homes";
     });
 
     return (
         <div>
+		    <div className="pageHeader">
+                <Header title="Rate Dwelling" />
+            </div>
             <body>
             <div className="firstOptions">
                 <section>
