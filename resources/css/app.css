@@ -1,3 +1,45 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.home,
+.services,
+.products,
+.sign-in {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.landlords {
+    /*background-image: url('/images/img-2.svg');*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 100px;
+}
+
+
+.tenants {
+    /*background-image: url('/images/img-1.svg');*/
+	'images/img-8.svg'
+	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 100px;
+}
+
+
+.sign-in {
+    /*background-image: url('/images/img-6.jpg');*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+}
