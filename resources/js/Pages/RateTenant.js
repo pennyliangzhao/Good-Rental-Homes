@@ -22,12 +22,7 @@ function RateTenant() {
     return (
         <div>
             <div className="pageHeader">
-            <PageHeader
-                ghost={false}
-                onBack={() => window.history.back()}
-                title="Rate Tenant"
-            >
-            </PageHeader>
+				<Header title="Rate Tenant" />
             </div>
             <body>
                 <label htmlFor="anonQuestion">What is the address of the property</label>

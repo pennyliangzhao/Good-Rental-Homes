@@ -4,12 +4,12 @@ import "antd/dist/antd.css";
 import { PageHeader, Button } from 'antd';
 
 
-function Header() {
+function Header(props) {
     return (
         <PageHeader
             ghost={false}
             onBack={() => window.history.back()}
-            title="Rate Landlord"
+            title={props.title}
         >
         </PageHeader>
     );

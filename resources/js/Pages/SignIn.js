@@ -6,8 +6,16 @@ import '../../css/SignInstyle.css';
 function SignIn() {
     return (
         <>
-            <div className="header">Sign In</div>
-            <div className="content">
+            <div className="pageHeader">
+            <PageHeader className="pageheader"
+                ghost={false}
+                onBack={() => window.history.back()}
+                title="Rate Landlord"
+            >
+            </PageHeader>
+            </div>
+
+			<div className="content">
                 <div className="image">
                     <img src='images/img-5.svg' />
                 </div>

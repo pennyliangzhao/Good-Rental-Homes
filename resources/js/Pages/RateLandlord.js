@@ -6,7 +6,7 @@ import DefaultNotes from "../Components/notes";
 import DateSelector from "../Components/DateSelector"
 import CheckboxController from "../Components/ConditionalTextfield";
 import "antd/dist/antd.css";
-import { PageHeader } from 'antd';
+import Header from "../Components/Header";
 import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
 
@@ -25,12 +25,7 @@ function Landlords() {
     return (
         <div>
             <div className="pageHeader">
-            <PageHeader className="pageheader"
-                ghost={false}
-                onBack={() => window.history.back()}
-                title="Rate Landlord"
-            >
-            </PageHeader>
+				<Header title="Rate Landlord" />
             </div>
             <body>
                 <label htmlFor="anonQuestion">What is the address of the property</label>
