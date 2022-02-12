@@ -1,5 +1,5 @@
 import '../../css/RatePages.css';
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import DefaultNotes from "../Components/RateAtHomeQuestionnaire";
 import Modal from "../Components/Modal";
 import CheckboxComponent from "../Components/Checkbox";

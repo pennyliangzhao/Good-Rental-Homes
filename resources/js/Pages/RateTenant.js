@@ -1,5 +1,5 @@
 import '../../css/RatePages.css';
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import DefaultNotes from "../Components/TenantQuestionnaire";
 import CheckboxComponent from "../Components/Checkbox";
 import Note from "../Components/Note";
