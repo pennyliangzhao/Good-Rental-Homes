@@ -21,20 +21,16 @@ function Register() {
                     </div>
                     <div className="form">
                         <div className="form-group">
-                            <label htmlFor="username">Username</label>
-                            <input type="text" name="username" placeholder="username" />
+                            <label htmlFor="name">Username</label>
+                            <input type="text" name="name" placeholder="Name" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
-                            <input type="text" name="email" placeholder="email" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Address</label>
-                            <input type="text" name="address" placeholder="address" />
+                            <input type="text" name="email" placeholder="Email" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
-                            <input type="text" name="password" placeholder="password" />
+                            <input type="text" name="password" placeholder="Password" />
                         </div>
                         <div className="footer">
                             <button type="button" className="btn">
