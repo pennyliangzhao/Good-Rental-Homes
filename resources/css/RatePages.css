@@ -24,8 +24,8 @@ article {
     text-align: left;
     display: flex;
     flex-flow: column wrap;
-    flex: 500px;
-    width: 75%;
+    /*flex: 500px;*/
+    width: 100%;
 
 }
 
@@ -239,14 +239,16 @@ input[type=submit] {
     float: left;
     width: 25%;
     margin-top: 6px;
+
 }
 
 /* Floating column for inputs: 75% width */
 .col-75 {
     float: left;
-    width: 75%;
+    width: auto;
     margin-top: 6px;
 }
+
 
 /* Clear floats after the columns */
 .row:after {
@@ -258,7 +260,8 @@ input[type=submit] {
 /* Floating row for inputs: 25% width */
 .row-25 {
     display: inline;
-    width: 25%;
+    /*width: 25%;*/
+    width: auto;
     margin-top: 6px;
     height: 100px;
     padding: 5px;
@@ -299,3 +302,4 @@ input[type=submit] {
     font-size: 50px;
 
 }
+
