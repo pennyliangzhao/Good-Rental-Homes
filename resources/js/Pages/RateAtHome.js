@@ -16,6 +16,11 @@ function RateAtHome() {
         });
     }
 
+    {/* Update site title */}
+    useEffect(() => {
+        document.title = "Rate at Home - Good Rental Homes";
+    });
+
     return (
         <div>
             <body>

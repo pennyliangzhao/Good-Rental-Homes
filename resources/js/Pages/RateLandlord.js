@@ -22,6 +22,11 @@ function Landlords() {
         });
     }
 
+	{/* Update site title */}
+    useEffect(() => {
+        document.title = "Rate Landlord - Good Rental Homes";
+    });
+
     return (
         <div>
             <div className="pageHeader">

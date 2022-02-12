@@ -15,6 +15,12 @@ function RateHouse() {
             });
         });
     }
+
+	{/* Update site title */}
+    useEffect(() => {
+        document.title = "Rate House - Good Rental Homes";
+    });
+
     return (
         <div>
             <body>

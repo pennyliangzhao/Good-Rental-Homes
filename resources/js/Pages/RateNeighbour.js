@@ -15,7 +15,13 @@ function RateNeighbour() {
             });
         });
     }
-    return (
+    
+	{/* Update site title */}
+    useEffect(() => {
+        document.title = "Rate Neighbour - Good Rental Homes";
+    });
+
+	return (
         <div>
             <body>
             <div className="firstOptions">

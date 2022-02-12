@@ -19,6 +19,12 @@ function RateTenant() {
             });
         });
     }
+
+	{/* Update site title */}
+	useEffect(() => {    
+		document.title = "Rate Tenant - Good Rental Homes";
+	});
+
     return (
         <div>
             <div className="pageHeader">
