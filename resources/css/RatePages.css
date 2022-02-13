@@ -302,6 +302,7 @@ input[type=submit] {
     height: 90px;
     width: 180px;
     border-radius: 20px;
+    align-self: center;
 }
 
 .dateSelector {
@@ -313,6 +314,12 @@ input[type=submit] {
     height: auto;
     width: auto;
     align-content: flex-start;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

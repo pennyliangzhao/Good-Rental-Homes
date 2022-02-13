@@ -89,17 +89,29 @@ export default function Landlords() {
             	        </div>
             	        {/*----datesQuestion-END----------------------------------------------------------------------------*/}
 
-            	        {/*----agencyQuestion-START-------------------------------------------------------------------------*/}
-            	        <div className="row">
-            	            <div className="col-25">
-            	                <label htmlFor="agencyQuestion">Is your landlord part of a professional agency?</label>
-            	            </div>
-            	            <div className="row-25">
-            	                <CheckboxController />
-            	            </div>
-            	        </div>
-            	        {/*----agencyQuestion-END---------------------------------------------------------------------------*/}
+                    {/*----landlordNameQuestion-START-------------------------------------------------------------------*/}
+                    <div className="row">
+                        <div className="col-25">
+                            <label htmlFor="landlordNameQuestion">What is your landlord's name?</label>
+                        </div>
+                        <div className="col-75">
+                            <textarea>
+                         Name
+                         </textarea>
+                        </div>
+                    </div>
+                    {/*----landlordNameQuestion-END---------------------------------------------------------------------*/}
 
+                    {/*----agencyQuestion-START-------------------------------------------------------------------------*/}
+                    <div className="row">
+                        <div className="col-25">
+                            <label htmlFor="agencyQuestion">Is your landlord part of a professional agency? </label>
+                        </div>
+                        <div className="row-25">
+                            <CheckboxController/>
+                        </div>
+                    </div>
+                    {/*----agencyQuestion-END---------------------------------------------------------------------------*/}
 
             	        {/*----ratings-START--------------------------------------------------------------------------------*/}
             	        <div className="defaultNotes">
@@ -138,9 +150,10 @@ export default function Landlords() {
             	        </div>
             	        {/*----contactQuestion-END--------------------------------------------------------------------------*/}
 
-            	        {/*----submitButton-START---------------------------------------------------------------------------*/}
-
-            	        <button className="button">Submit</button>
+                    {/*----submitButton-START---------------------------------------------------------------------------*/}
+                    <div className="buttonContainer">
+                    <button className="button" >Submit</button>
+                    </div>
 
             	        {/*----submitButton-END-----------------------------------------------------------------------------*/}
 
