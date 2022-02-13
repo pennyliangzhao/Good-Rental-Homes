@@ -34,6 +34,7 @@
     "dependencies": {
         "@material-ui/core": "^4.12.3",
         "@material-ui/icons": "^4.11.2",
+        "@mui/material": "^5.4.1",
         "antd": "^4.18.6",
         "react-copy-to-clipboard": "^5.0.4",
         "react-datepicker": "^4.6.0",

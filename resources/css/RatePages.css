@@ -212,8 +212,9 @@ input[type=text], select, textarea{
 /* Style the label to display next to the inputs */
 label {
     padding: 12px 12px 12px 0;
-    display: inline-block;
-	font-size: 24px; 
+    /*display: inline-block;*/
+	font-size: 24px;
+    max-width: 100%;
 }
 
 /* Style the submit button */
@@ -232,6 +233,12 @@ input[type=submit] {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    align-content: flex-start;
+    column-gap: 1em;
+
 }
 
 /* Floating column for labels: 25% width */
@@ -280,7 +287,6 @@ input[type=submit] {
     /*border-width: 250px;*/
     transform: scale(1.25);
     border-color: #1f98f4;
-
 }
 
 .button {
@@ -295,11 +301,17 @@ input[type=submit] {
     height: 90px;
     width: 180px;
     border-radius: 20px;
-
 }
 
 .dateSelector {
     font-size: 50px;
-
 }
+
+.map {
+    display: flex;
+    height: auto;
+    width: auto;
+    align-content: flex-start;
+}
+
 

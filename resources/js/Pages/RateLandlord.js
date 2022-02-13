@@ -9,10 +9,14 @@ import CheckboxController from "../Components/ConditionalTextfield";
 import "antd/dist/antd.css";
 import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
+import Switch from "@/Components/Switch";
+
 
 function Landlords() {
     const [notes, setNotes] = useState([]);
+    const [value, setValue] = useState(false);
     const MapLoader = withScriptjs(Map);
+
 
     function deleteNote(id) {
         setNotes(prevNotes => {
@@ -29,29 +33,44 @@ function Landlords() {
 
     return (
         <div>
+
             <div className="pageHeader">
 				<Header title="Rate Landlord" />
             </div>
+
             <body>
-                <label htmlFor="anonQuestion">What is the address of the property</label>
+
+                <label htmlFor="addressQuestion">What is the address of the property?</label>
+
                 <div className="map" >
                     <MapLoader
                         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2R2t03PiHkPhna_0HIxMZWXQxokn18W8&libraries=places"
-                        loadingElement={<div  style={{height: `100%` }}/>}
+                        loadingElement={<div  style={{height: `50%`, width: `50%`}}/>}
                     />
                 </div>
+
             <div className="container">
                 <form>
 
                     {/*----anonQuestion-START---------------------------------------------------------------------------*/}
-                    <div className="row">
-                        <div className="col-25">
-                            <label htmlFor="anonQuestion"> TEST 3 Would you like to submit this form anonymously?</label>
-                        </div>
-                        <div className="col-75">
-                            <CheckboxComponent/>
-                        </div>
+                    {/*<div className="row">*/}
+                    {/*    <div className="col-25">*/}
+                    {/*        <label htmlFor="anonQuestion">  TEST 4 Would you like to submit this form anonymously?</label>*/}
+                    {/*    </div>*/}
+                    {/*    <div className="col-75">*/}
+                    {/*        <CheckboxComponent/>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+                    <div className="checkNQuestion">
+                        {/*<CheckboxComponent/>*/}
+                        <Switch
+                            isOn={value}
+                            handleToggle={() => setValue(!value)}
+                        />
+                        <label htmlFor="anonQuestion">  TEST 4 Would you like to submit this form anonymously?</label>
                     </div>
+
+
                     {/*----anonQuestion-END-----------------------------------------------------------------------------*/}
 
                     {/*----datesQuestion-START--------------------------------------------------------------------------*/}
