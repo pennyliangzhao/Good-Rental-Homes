@@ -12,9 +12,9 @@ import withScriptjs from "react-google-maps/lib/withScriptjs";
 import Switch from "@/Components/Switch";
 
 
-function Landlords() {
+export default function Landlords() {
     const [notes, setNotes] = useState([]);
-    const [value, setValue] = useState(false);
+    const [checked, setChecked] = useState(false);
     const MapLoader = withScriptjs(Map);
 
 
@@ -64,10 +64,10 @@ function Landlords() {
                     <div className="checkNQuestion">
                         {/*<CheckboxComponent/>*/}
                         <Switch
-                            isOn={value}
-                            handleToggle={() => setValue(!value)}
+                            checked={checked}
+                            onChange={setChecked}
                         />
-                        <label htmlFor="anonQuestion">  TEST 4 Would you like to submit this form anonymously?</label>
+                        <label htmlFor="anonQuestion">TEST 4 Would you like to submit this form anonymously?</label>
                     </div>
 
 
@@ -157,6 +157,4 @@ function Landlords() {
     );
 
 }
-
-export default Landlords;
 
