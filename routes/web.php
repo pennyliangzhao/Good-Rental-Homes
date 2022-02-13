@@ -27,5 +27,13 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+Route::resource('LandlordSurvey', 'LLS_Controller');
+Route::resource('TenantSurvey', 'TSController');
+Route::fallback(function (){
+    return view('app');
+});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 require __DIR__.'/auth.php';
