@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\LandlordSurvey;
+use App\Models\TenantSurvey;
 use Illuminate\Http\Request;
 
-class LLS_Controller extends Controller
+class TSController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,7 @@ class LLS_Controller extends Controller
     public function index()
     {
         //
-        $items = LandlordSurvey::all();
+        $items = TenantSurvey::all();
         return response()->json($items);
     }
 
@@ -39,21 +40,22 @@ class LLS_Controller extends Controller
     public function store(Request $request)
     {
         //
-        $item = new LandlordSurvey([
+        $item = new TenantSurvey([
+            'landlord' => $request->get('landlord'),
             'tenant' => $request->get('tenant'),
             'property' => $request->get('property'),
             'start_date' => $request->get('start_date'),
             'end_date' => $request->get('end_date'),
-            'communication' => $request->get('communication'),
-            'discretion' => $request->get('discretion'),
-            'responsiveness' => $request->get('responsiveness'),
-            'compliance' => $request->get('compliance'),
+            'rent_on_time' => $request->get('rent_on_time'),
+            'dwelling_tidiness' => $request->get('dwelling_tidiness'),
+            'grounds_tidiness' => $request->get('grounds_tidiness'),
+            'considerate' => $request->get('considerate'),
             'overall_rating' => $request->get('overall_rating'),
             'overall_comment' => $request->get('overall_comment'),
             'anonymous' => $request->get('anonymous'),
             'contact' => $request->get('contact'),
-            'agency' => $request->get('agency'),
-            'agency_name' => $request->get('agency_name'),
+//            'agency' => $request->get('agency'),
+//            'agency_name' => $request->get('agency_name'),
 
         ]);
         $item->save();
@@ -69,7 +71,6 @@ class LLS_Controller extends Controller
     public function show($id)
     {
         //
-
     }
 
     /**
@@ -81,7 +82,7 @@ class LLS_Controller extends Controller
     public function edit($id)
     {
         //
-        $item = LandlordSurvey::find($id);
+        $item = TenantSurvey::find($id);
         return response()->json($item);
     }
 
@@ -95,12 +96,6 @@ class LLS_Controller extends Controller
     public function update(Request $request, $id)
     {
         //
-//        $item = Item::find($id);
-//        $item->name = $request->get('name');
-//        $item->price = $request->get('price');
-//        $item->save();
-
-        return response()->json('Successfully Updated');
     }
 
     /**
@@ -112,7 +107,7 @@ class LLS_Controller extends Controller
     public function destroy($id)
     {
         //
-        $item = LandlordSurvey::find($id);
+        $item = TenantSurvey::find($id);
         $item->delete();
 
         return response()->json('Successfully Deleted');
