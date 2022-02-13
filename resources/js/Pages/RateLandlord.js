@@ -33,13 +33,11 @@ export default function Landlords() {
 
     return (
         <div>
-
             <div className="pageHeader">
 				<Header title="Rate Landlord" />
             </div>
 
             <body>
-
                 <label htmlFor="addressQuestion">What is the address of the property?</label>
 
                 <div className="map" >
@@ -49,111 +47,108 @@ export default function Landlords() {
                     />
                 </div>
 
-            <div className="container">
-                <form>
+				<div className="container">
+            	    <form>
 
-                    {/*----anonQuestion-START---------------------------------------------------------------------------*/}
-                    {/*<div className="row">*/}
-                    {/*    <div className="col-25">*/}
-                    {/*        <label htmlFor="anonQuestion">  TEST 4 Would you like to submit this form anonymously?</label>*/}
-                    {/*    </div>*/}
-                    {/*    <div className="col-75">*/}
-                    {/*        <CheckboxComponent/>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
-                    <div className="checkNQuestion">
-                        {/*<CheckboxComponent/>*/}
-                        <Switch
-                            checked={checked}
-                            onChange={setChecked}
-                        />
-                        <label htmlFor="anonQuestion">TEST 4 Would you like to submit this form anonymously?</label>
-                    </div>
-
-
-                    {/*----anonQuestion-END-----------------------------------------------------------------------------*/}
-
-                    {/*----datesQuestion-START--------------------------------------------------------------------------*/}
-                    <div className="row">
-                        <div className="col-25">
-                            <label htmlFor="datesQuestion">What dates were you at the property?</label>
-                        </div>
-                        <div className="col-25">
-                            <label htmlFor="startDate">Start Date:</label>
-                            <div className="dateSelector">
-                            <DateSelector/>
-                            </div>
-                            <label htmlFor="endDate">End Date:</label>
-                            <DateSelector/>
-                        </div>
-                    </div>
-                    {/*----datesQuestion-END----------------------------------------------------------------------------*/}
-
-                    {/*----agencyQuestion-START-------------------------------------------------------------------------*/}
-                    <div className="row">
-                        <div className="col-25">
-                            <label htmlFor="agencyQuestion">Is your landlord part of a professional agency? </label>
-                        </div>
-                        <div className="row-25">
-                            <CheckboxController/>
-                        </div>
-                    </div>
-                    {/*----agencyQuestion-END---------------------------------------------------------------------------*/}
+            	        {/*----anonQuestion-START---------------------------------------------------------------------------*/}
+            	        {/*<div className="row">*/}
+            	        {/*    <div className="col-25">*/}
+            	        {/*        <label htmlFor="anonQuestion">  TEST 4 Would you like to submit this form anonymously?</label>*/}
+            	        {/*    </div>*/}
+            	        {/*    <div className="col-75">*/}
+            	        {/*        <CheckboxComponent/>*/}
+            	        {/*    </div>*/}
+            	        {/*</div>*/}
+            	        <div className="checkNQuestion">
+            	            {/*<CheckboxComponent/>*/}
+            	            <Switch
+            	                checked={checked}
+            	                onChange={setChecked}
+            	            />
+            	            <label htmlFor="anonQuestion">TEST 4 Would you like to submit this form anonymously?</label>
+            	        </div>
 
 
-                    {/*----ratings-START--------------------------------------------------------------------------------*/}
-                    <div className="defaultNotes">
-                        {DefaultNotes.map(item => (
-                            <Note
-                                key={item.key}
-                                title={item.title}
-                                content={item.content}
-                                star={deleteNote}
-                            />))}
-                    </div>
-                    {/*----ratings-END----------------------------------------------------------------------------------*/}
+            	        {/*----anonQuestion-END-----------------------------------------------------------------------------*/}
+
+            	        {/*----datesQuestion-START--------------------------------------------------------------------------*/}
+            	        <div className="row">
+            	            <div className="col-25">
+            	                <label htmlFor="datesQuestion">What dates were you at the property?</label>
+            	            </div>
+            	            <div className="col-25">
+            	                <label htmlFor="startDate">Start Date:</label>
+            	                <div className="dateSelector">
+									<DateSelector />
+            	                </div>
+            	                <label htmlFor="endDate">End Date:</label>
+            	                <div className="dateSelector">
+									<DateSelector />
+								</div>
+            	            </div>
+            	        </div>
+            	        {/*----datesQuestion-END----------------------------------------------------------------------------*/}
+
+            	        {/*----agencyQuestion-START-------------------------------------------------------------------------*/}
+            	        <div className="row">
+            	            <div className="col-25">
+            	                <label htmlFor="agencyQuestion">Is your landlord part of a professional agency?</label>
+            	            </div>
+            	            <div className="row-25">
+            	                <CheckboxController />
+            	            </div>
+            	        </div>
+            	        {/*----agencyQuestion-END---------------------------------------------------------------------------*/}
+
+
+            	        {/*----ratings-START--------------------------------------------------------------------------------*/}
+            	        <div className="defaultNotes">
+            	            {DefaultNotes.map(item => (
+            	                <Note
+            	                    key={item.key}
+            	                    title={item.title}
+            	                    content={item.content}
+            	                    star={deleteNote}
+            	                />))}
+            	        </div>
+            	        {/*----ratings-END----------------------------------------------------------------------------------*/}
 
 
 
-                    {/*----overallComments-START------------------------------------------------------------------------*/}
-                    <div className="row">
-                        <div className="col-25">
-                            <label htmlFor="overallComments">Overall comments about the landlord</label>
-                        </div>
-                        <div className="col-75">
-                            <textarea>
-                         Your other comments about the landlord
-                         </textarea>
-                        </div>
-                    </div>
-                    {/*----overallComments-END--------------------------------------------------------------------------*/}
+            	        {/*----overallComments-START------------------------------------------------------------------------*/}
+            	        <div className="row">
+            	            <div className="col-25">
+            	                <label htmlFor="overallComments">Overall comments about the landlord</label>
+            	            </div>
+            	            <div className="col-75">
+            	                <textarea>Your other comments about the landlord</textarea>
+            	            </div>
+            	        </div>
+            	        {/*----overallComments-END--------------------------------------------------------------------------*/}
 
 
-                    {/*----contactQuestion-START------------------------------------------------------------------------*/}
-                    <div className="row">
-                        <div className="col-25">
-                            <label htmlFor="contactQuestion">Are you happy to be contacted by prospective tenants
-                                about the property?</label>
-                        </div>
-                        <div className="col-25">
-                            <CheckboxComponent/>
-                        </div>
-                    </div>
-                    {/*----contactQuestion-END--------------------------------------------------------------------------*/}
+            	        {/*----contactQuestion-START------------------------------------------------------------------------*/}
+            	        <div className="row">
+            	            <div className="col-25">
+            	                <label htmlFor="contactQuestion">Are you happy to be contacted by prospective tenants about the property?</label>
+            	            </div>
+            	            <div className="col-25">
+            	                <CheckboxComponent />
+            	            </div>
+            	        </div>
+            	        {/*----contactQuestion-END--------------------------------------------------------------------------*/}
 
-                    {/*----submitButton-START---------------------------------------------------------------------------*/}
+            	        {/*----submitButton-START---------------------------------------------------------------------------*/}
 
-                    <button className="button" >Submit</button>
+            	        <button className="button">Submit</button>
 
-                    {/*----submitButton-END-----------------------------------------------------------------------------*/}
+            	        {/*----submitButton-END-----------------------------------------------------------------------------*/}
 
 
-                </form>
-            </div>
+            	    </form>
+            	</div>
             </body>
         </div>
-
-
     );
 
 }
