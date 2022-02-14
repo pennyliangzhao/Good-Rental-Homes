@@ -12,12 +12,14 @@ import withScriptjs from "react-google-maps/lib/withScriptjs";
 import {useForm} from "@inertiajs/inertia-react";
 
 function Landlords() {
-    const {notes, setNotes, data, setData, post, processing, errors, reset} = useForm({});
+    const {notes, setNotes, data, setData, post, processing, errors, reset} = useForm({
+        overall_comment: '',
+    });
     const MapLoader = withScriptjs(Map);
 
     useEffect(() => {
         return () => {
-            reset('password');
+            reset('overall_comment');
         };
     }, []);
 
@@ -36,7 +38,7 @@ function Landlords() {
     const submit = (e) => {
         e.preventDefault();
 
-        post(route('login'));
+        post(route('storesurvey'));
     };
 
 	{/* Update site title */}
@@ -58,7 +60,7 @@ function Landlords() {
                     />
                 </div>
             <div className="container">
-                <form>
+                <form onSubmit={submit}>
 
                     {/*----anonQuestion-START---------------------------------------------------------------------------*/}
                     <div className="row">
@@ -119,7 +121,7 @@ function Landlords() {
                             <label htmlFor="overallComments">Overall comments about the landlord</label>
                         </div>
                         <div className="col-75">
-                            <textarea>
+                            <textarea onSubmit={onHandleChange}>
                          Your other comments about the landlord
                          </textarea>
                         </div>
@@ -141,7 +143,7 @@ function Landlords() {
 
                     {/*----submitButton-START---------------------------------------------------------------------------*/}
 
-                    <button className="button" >Submit</button>
+                    <input type="submit" className="button" value="Submit"/>
 
                     {/*----submitButton-END-----------------------------------------------------------------------------*/}
 
