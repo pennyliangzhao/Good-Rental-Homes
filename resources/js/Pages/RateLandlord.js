@@ -9,10 +9,17 @@ import CheckboxController from "../Components/ConditionalTextfield";
 import "antd/dist/antd.css";
 import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
+import {useForm} from "@inertiajs/inertia-react";
 
 function Landlords() {
-    const [notes, setNotes] = useState([]);
+    const {notes, setNotes, data, setData, post, processing, errors, reset} = useForm({});
     const MapLoader = withScriptjs(Map);
+
+    useEffect(() => {
+        return () => {
+            reset('password');
+        };
+    }, []);
 
     function deleteNote(id) {
         setNotes(prevNotes => {
@@ -21,6 +28,16 @@ function Landlords() {
             });
         });
     }
+
+    const onHandleChange = (event) => {
+        setData(event.target.name, event.target.type === 'checkbox' ? event.target.checked : event.target.value);
+    };
+
+    const submit = (e) => {
+        e.preventDefault();
+
+        post(route('login'));
+    };
 
 	{/* Update site title */}
     useEffect(() => {
