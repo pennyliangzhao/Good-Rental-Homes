@@ -26,6 +26,9 @@ function Footer() {
         <div className='footer-container'>
             <section className='footer-subscription'>
                 <p className='footer-subscription-heading'>
+                    Trusted by 3,536 tenants and 4,336 Landlords/agents with 4,2360 homes.
+                    <br/>
+                    <br/>
                     Join the newsletter to receive reviews of properties & landlords near you.
                 </p>
                 <p className='footer-subscription-text'>

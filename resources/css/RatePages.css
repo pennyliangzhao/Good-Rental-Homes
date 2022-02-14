@@ -283,6 +283,7 @@ input[type=submit] {
     }
 }
 
+
 .button:hover {
     /*border-width: 250px;*/
     transform: scale(1.25);

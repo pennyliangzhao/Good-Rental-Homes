@@ -22,13 +22,14 @@ video {
 .home-container > h1 {
     color: #fff;
     font-size: 40px;
-    margin-top: -20px;
+    margin-top: 35px;
 }
 
 .home-container > p {
     margin-top: 8px;
+    margin-bottom: -18px;
     color: #fff;
-    font-size: 32px;
+    font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
@@ -54,12 +55,13 @@ video {
 
 @media screen and (max-width: 768px) {
     .home-container > h1 {
-        font-size: 50px;
-        margin-top: -100px;
+        font-size: 30px;
+        margin-top: 150px;
     }
 
     .home-container > p {
-        font-size: 30px;
+        font-size: 20px;
+        text-align: center;
     }
 
     .btn-mobile {
@@ -70,6 +72,13 @@ video {
     .btn {
         width: 100%;
     }
+    . div.map {
+         display: flex;
+         height: auto;
+         width: auto;
+         align-content: flex-start;
+     }
+
 }
 .btn-outline-primary {
     background-color: transparent;
