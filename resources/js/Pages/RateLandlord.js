@@ -62,8 +62,8 @@ export default function Landlords() {
                     <div className="checkNQuestion">
                         {/*<CheckboxComponent/>*/}
                         <Switch
-                            checked={value}
-                            handleToggle={() => setValue(!value)}
+							checked={checked}
+                            onChange={setChecked}
                         />
                         <label htmlFor="anonQuestion"> Would you like to submit this form anonymously?</label>
                     </div>
@@ -140,8 +140,8 @@ export default function Landlords() {
                     <div className="row">
                         <div className="col-25">
                             <Switch
-                                checked={value}
-                                handleToggle={() => setValue(!value)}
+                                checked={checked}
+								onChange={setChecked}
                             />
                             <label htmlFor="contactQuestion">Are you happy to be contacted by prospective tenants
                                 about the property?</label>
