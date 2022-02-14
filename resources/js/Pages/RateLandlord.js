@@ -50,26 +50,24 @@ export default function Landlords() {
 				<div className="container">
             	    <form>
 
-            	        {/*----anonQuestion-START---------------------------------------------------------------------------*/}
-            	        {/*<div className="row">*/}
-            	        {/*    <div className="col-25">*/}
-            	        {/*        <label htmlFor="anonQuestion">  TEST 4 Would you like to submit this form anonymously?</label>*/}
-            	        {/*    </div>*/}
-            	        {/*    <div className="col-75">*/}
-            	        {/*        <CheckboxComponent/>*/}
-            	        {/*    </div>*/}
-            	        {/*</div>*/}
-            	        <div className="checkNQuestion">
-            	            {/*<CheckboxComponent/>*/}
-            	            <Switch
-            	                checked={checked}
-            	                onChange={setChecked}
-            	            />
-            	            <label htmlFor="anonQuestion">TEST 4 Would you like to submit this form anonymously?</label>
-            	        </div>
-
-
-            	        {/*----anonQuestion-END-----------------------------------------------------------------------------*/}
+                    {/*----anonQuestion-START---------------------------------------------------------------------------*/}
+                    {/*<div className="row">*/}
+                    {/*    <div className="col-25">*/}
+                    {/*        <label htmlFor="anonQuestion">  TEST 4 Would you like to submit this form anonymously?</label>*/}
+                    {/*    </div>*/}
+                    {/*    <div className="col-75">*/}
+                    {/*        <CheckboxComponent/>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+                    <div className="checkNQuestion">
+                        {/*<CheckboxComponent/>*/}
+                        <Switch
+                            isOn={value}
+                            handleToggle={() => setValue(!value)}
+                        />
+                        <label htmlFor="anonQuestion"> Would you like to submit this form anonymously?</label>
+                    </div>
+                    {/*----anonQuestion-END-----------------------------------------------------------------------------*/}
 
             	        {/*----datesQuestion-START--------------------------------------------------------------------------*/}
             	        <div className="row">
@@ -138,17 +136,21 @@ export default function Landlords() {
             	        </div>
             	        {/*----overallComments-END--------------------------------------------------------------------------*/}
 
-
-            	        {/*----contactQuestion-START------------------------------------------------------------------------*/}
-            	        <div className="row">
-            	            <div className="col-25">
-            	                <label htmlFor="contactQuestion">Are you happy to be contacted by prospective tenants about the property?</label>
-            	            </div>
-            	            <div className="col-25">
-            	                <CheckboxComponent />
-            	            </div>
-            	        </div>
-            	        {/*----contactQuestion-END--------------------------------------------------------------------------*/}
+                    {/*----contactQuestion-START------------------------------------------------------------------------*/}
+                    <div className="row">
+                        <div className="col-25">
+                            <Switch
+                                isOn={value}
+                                handleToggle={() => setValue(!value)}
+                            />
+                            <label htmlFor="contactQuestion">Are you happy to be contacted by prospective tenants
+                                about the property?</label>
+                        </div>
+                        <div className="col-25">
+                            {/*<CheckboxComponent/>*/}
+                        </div>
+                    </div>
+                    {/*----contactQuestion-END--------------------------------------------------------------------------*/}
 
                     {/*----submitButton-START---------------------------------------------------------------------------*/}
                     <div className="buttonContainer">
