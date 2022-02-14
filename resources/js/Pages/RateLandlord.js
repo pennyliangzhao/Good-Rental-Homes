@@ -62,7 +62,7 @@ export default function Landlords() {
                     <div className="checkNQuestion">
                         {/*<CheckboxComponent/>*/}
                         <Switch
-                            isOn={value}
+                            checked={value}
                             handleToggle={() => setValue(!value)}
                         />
                         <label htmlFor="anonQuestion"> Would you like to submit this form anonymously?</label>
@@ -140,7 +140,7 @@ export default function Landlords() {
                     <div className="row">
                         <div className="col-25">
                             <Switch
-                                isOn={value}
+                                checked={value}
                                 handleToggle={() => setValue(!value)}
                             />
                             <label htmlFor="contactQuestion">Are you happy to be contacted by prospective tenants
