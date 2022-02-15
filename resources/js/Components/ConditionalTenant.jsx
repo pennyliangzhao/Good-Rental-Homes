@@ -4,7 +4,6 @@ function CheckboxController() {
     const [isToggled, setIsToggled] = useState(false);
     return (
         <div className="Greeting">
-
             <input type="checkbox" onClick={() => setIsToggled(!isToggled)}/>
             { isToggled &&
                 <textarea>
