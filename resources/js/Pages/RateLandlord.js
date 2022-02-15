@@ -1,7 +1,6 @@
 import '../../css/RatePages.css';
 import React, {useState, useEffect} from 'react';
 import Header from "../Components/Header";
-import CheckboxComponent from "../Components/Checkbox";
 import Note from "../Components/Note";
 import DefaultNotes from "../Components/notes";
 import DateSelector from "../Components/DateSelector"
@@ -26,8 +25,6 @@ export default function Landlords() {
         });
     }
 
-    {/* Update site title */
-    }
     useEffect(() => {
         document.title = "Rate Landlord - Good Rental Homes";
     });
@@ -39,7 +36,11 @@ export default function Landlords() {
             </div>
 
             <body>
-            <label htmlFor="addressQuestion">What is the address of the property?</label>
+
+            {/*----addressQuestion-START--------------------------------------------------------------------------------*/}
+            <div className="borderQuestion">
+                <label htmlFor="addressQuestion">What is the address of the property?</label>
+            </div>
 
             <div className="map">
                 <MapLoader
@@ -47,61 +48,67 @@ export default function Landlords() {
                     loadingElement={<div style={{height: `50%`, width: `50%`}}/>}
                 />
             </div>
+            {/*----addressQuestion-END----------------------------------------------------------------------------------*/}
 
             <div className="container">
                 <form>
 
                     {/*----anonQuestion-START---------------------------------------------------------------------------*/}
                     <div className="checkNQuestion">
-                        <Switch
-                            checked={checked}
-                            onChange={setChecked}
-                        />
-                        <label htmlFor="anonQuestion"> Would you like to submit this form anonymously?</label>
+                        <div className="borderQuestion">
+                            <Switch
+                                checked={checked}
+                                onChange={setChecked}
+                            />
+                            <label htmlFor="anonQuestion"> Would you like to submit this form anonymously?</label>
+                        </div>
                     </div>
                     {/*----anonQuestion-END-----------------------------------------------------------------------------*/}
 
                     {/*----datesQuestion-START--------------------------------------------------------------------------*/}
-                    <div className="row">
-                        <div className="col-25">
-                            <label htmlFor="datesQuestion">What dates were you at the property?</label>
-                        </div>
-                        <div className="col-25">
-                            <label htmlFor="startDate">Start Date:</label>
-                            <div className="dateSelector">
-                                <DateSelector/>
+                    <div className="borderQuestion">
+                        <div className="row">
+                            <div className="col-25">
+                                <label htmlFor="datesQuestion">What dates were you at the property?</label>
                             </div>
-                            <label htmlFor="endDate">End Date:</label>
-                            <div className="dateSelector">
-                                <DateSelector/>
+                            <div className="col-25">
+                                <label htmlFor="startDate">Start Date:</label>
+                                <div className="dateSelector">
+                                    <DateSelector/>
+                                </div>
+                                <label htmlFor="endDate">End Date:</label>
+                                <div className="dateSelector">
+                                    <DateSelector/>
+                                </div>
                             </div>
                         </div>
                     </div>
                     {/*----datesQuestion-END----------------------------------------------------------------------------*/}
 
                     {/*----landlordNameQuestion-START-------------------------------------------------------------------*/}
-                    <div className="row">
-                        <div className="col-25">
-                            <label htmlFor="landlordNameQuestion">What is your landlord's name?</label>
-                        </div>
-                        <div className="col-75">
+                    <div className="borderQuestion">
+                        <div className="row">
+                            <div className="col-25">
+                                <label htmlFor="landlordNameQuestion">What is your landlord's name?</label>
+                            </div>
+                            <div className="col-75">
                             <textarea>
                          Name
                          </textarea>
+                            </div>
                         </div>
                     </div>
                     {/*----landlordNameQuestion-END---------------------------------------------------------------------*/}
 
                     {/*----agencyQuestion-START-------------------------------------------------------------------------*/}
-                    <div className="row">
-                        <div className="col-25">
-                            <label htmlFor="agencyQuestion">Is your landlord part of a professional agency? </label>
-                        </div>
-                        <div className="row-25">
-                            <Switch
-                                checked={checked}
-                                onChange={setChecked}
-                            />
+                    <div className="borderQuestion">
+                        <div className="row">
+                            <div className="col-25">
+                                <label htmlFor="agencyQuestion">Is your landlord part of a professional agency? </label>
+                            </div>
+                            <div className="row-25">
+                                <CheckboxController/>
+                            </div>
                         </div>
                     </div>
                     {/*----agencyQuestion-END---------------------------------------------------------------------------*/}
@@ -120,28 +127,32 @@ export default function Landlords() {
 
 
                     {/*----overallComments-START------------------------------------------------------------------------*/}
-                    <div className="row">
-                        <div className="col-25">
-                            <label htmlFor="overallComments">Overall comments about the landlord</label>
-                        </div>
-                        <div className="col-75">
-                            <textarea>Your other comments about the landlord</textarea>
+                    <div className="borderQuestion">
+                        <div className="row">
+                            <div className="col-25">
+                                <label htmlFor="overallComments">Overall comments about the landlord</label>
+                            </div>
+                            <div className="col-75">
+                                <textarea>Your other comments about the landlord</textarea>
+                            </div>
                         </div>
                     </div>
                     {/*----overallComments-END--------------------------------------------------------------------------*/}
 
                     {/*----contactQuestion-START------------------------------------------------------------------------*/}
-                    <div className="row">
-                        <div className="col-25">
-                            <Switch
-                                checked={checked}
-                                onChange={setChecked}
-                            />
-                            <label htmlFor="contactQuestion">Are you happy to be contacted by prospective tenants
-                                about the property?</label>
-                        </div>
-                        <div className="col-25">
-                            {/*<CheckboxComponent/>*/}
+                    <div className="borderQuestion">
+                        <div className="row">
+                            <div className="col-25">
+                                <Switch
+                                    checked={checked}
+                                    onChange={setChecked}
+                                />
+                                <label htmlFor="contactQuestion">Are you happy to be contacted by prospective tenants
+                                    about the property?</label>
+                            </div>
+                            <div className="col-25">
+                                {/*<CheckboxComponent/>*/}
+                            </div>
                         </div>
                     </div>
                     {/*----contactQuestion-END--------------------------------------------------------------------------*/}

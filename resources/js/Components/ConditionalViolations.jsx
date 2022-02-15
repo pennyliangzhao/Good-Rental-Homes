@@ -8,7 +8,7 @@ function CheckboxController() {
             <input type="checkbox" onClick={() => setIsToggled(!isToggled)}/>
             { isToggled &&
                 <textarea>
-                    e.g. unauthorized pets, unauthorized co-dwellers, unauthorized subletting, etc.
+                    e.g. unauthorized pets/ co-dwellers/ subletters
                 </textarea>}
 
         </div>
