@@ -7,7 +7,7 @@ import DefaultNotes from "../Components/TenantQuestionnaire";
 import DateSelector from "../Components/DateSelector"
 import CheckboxController from "../Components/ConditionalViolations";
 import RentAgianController from "../Components/ConditionalTenant";
-import complaintsController from "../Components/ConditionalComplaints";
+import ComplaintsController from "../Components/ConditionalComplaints";
 import "antd/dist/antd.css";
 import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
@@ -157,7 +157,7 @@ export default function Landlords() {
                                 <label htmlFor="agencyQuestion">Were there any complaints about the tenant from neighbours?</label>
                             </div>
                             <div className="row-25">
-                                <complaintsController/>
+                                <ComplaintsController/>
                             </div>
                         </div>
                         {/*----complanitsQuestion-END---------------------------------------------------------------------------*/}

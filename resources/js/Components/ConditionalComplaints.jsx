@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function CheckboxController() {
+function ComplaintsController() {
     const [isToggled, setIsToggled] = useState(false);
     return (
         <div className="Greeting">
@@ -15,5 +15,5 @@ function CheckboxController() {
     );
 }
 
-export default CheckboxController;
+export default ComplaintsController;
 
