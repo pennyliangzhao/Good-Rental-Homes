@@ -21,10 +21,9 @@ article {
 }
 
 .defaultNotes {
-    text-align: left;
+    text-align: start;
     display: flex;
     flex-flow: column wrap;
-    /*flex: 500px;*/
     width: 100%;
 
 }
@@ -142,6 +141,7 @@ footer p {
 .note h1 {
     font-size: 1.1em;
     margin-bottom: 6px;
+    margin-top: 10px;
 }
 .note p {
     font-size: 1.1em;
@@ -322,4 +322,12 @@ input[type=submit] {
     justify-content: center;
 }
 
+/*Adds border functions to all questions outside of star ratings */
+.borderQuestion{
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    margin: 16px;
 
+}
