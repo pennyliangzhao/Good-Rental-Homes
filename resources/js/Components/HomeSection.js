@@ -26,7 +26,7 @@ function HomeSection() {
                 <div className="map" >
                     <MapLoader
                         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2R2t03PiHkPhna_0HIxMZWXQxokn18W8&libraries=places"
-                        loadingElement={<div  style={{height: `100%` }}/>}
+                        loadingElement={<div style={{height: `50%`, width: `50%`}}/>}
                     />
                 </div>
             </div>

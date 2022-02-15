@@ -98,7 +98,10 @@ export default function Landlords() {
                             <label htmlFor="agencyQuestion">Is your landlord part of a professional agency? </label>
                         </div>
                         <div className="row-25">
-                            <CheckboxController/>
+                            <Switch
+                                checked={checked}
+                                onChange={setChecked}
+                            />
                         </div>
                     </div>
                     {/*----agencyQuestion-END---------------------------------------------------------------------------*/}
