@@ -10,13 +10,11 @@ import ComplaintsController from "../Components/ConditionalComplaints";
 import "antd/dist/antd.css";
 import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
-import Switch from "@/Components/Switch";
 import Footer from "@/Components/Footer";
+import Checkbox from "@/Components/Checkbox";
 
 
 export default function Landlords() {
-    const [notes, setNotes] = useState([]);
-    const [checked, setChecked] = useState(false);
     const MapLoader = withScriptjs(Map);
 
 
@@ -32,7 +30,7 @@ export default function Landlords() {
 
             <body>
 
-            {/*----addressQuestion-START---------------------------------------------------------------------------------*/}
+            {/*----addressQuestion-START--------------------------------------------------------------------------------*/}
             <div className="borderQuestion">
                 <label htmlFor="addressQuestion">What is the address of the property?</label>
             </div>
@@ -50,11 +48,8 @@ export default function Landlords() {
                     {/*----anonQuestion-START---------------------------------------------------------------------------*/}
                     <div className="checkNQuestion">
                         <div className="borderQuestion">
-                            <Switch
-                                checked={checked}
-                                onChange={setChecked}
-                            />
                             <label htmlFor="anonQuestion"> Would you like to submit this form anonymously?</label>
+                            <Checkbox/>
                         </div>
                     </div>
                     {/*----anonQuestion-END-----------------------------------------------------------------------------*/}
@@ -79,7 +74,7 @@ export default function Landlords() {
                     </div>
                     {/*----datesQuestion-END----------------------------------------------------------------------------*/}
 
-                    {/*----tenantNameQuestion-START-------------------------------------------------------------------*/}
+                    {/*----tenantNameQuestion-START---------------------------------------------------------------------*/}
                     <div className="borderQuestion">
                         <div className="row">
                             <div className="col-25">
@@ -92,7 +87,7 @@ export default function Landlords() {
                             </div>
                         </div>
                     </div>
-                    {/*----tenantNameQuestion-END---------------------------------------------------------------------*/}
+                    {/*----tenantNameQuestion-END-----------------------------------------------------------------------*/}
 
                     {/*----ratings-START--------------------------------------------------------------------------------*/}
                     <div className="defaultNotes">
@@ -119,7 +114,7 @@ export default function Landlords() {
                     </div>
                     {/*----overallComments-END--------------------------------------------------------------------------*/}
 
-                    {/*----violationsQuestion-START-------------------------------------------------------------------------*/}
+                    {/*----violationsQuestion-START---------------------------------------------------------------------*/}
                     <div className="borderQuestion">
                         <div className="row">
                             <div className="col-25">
@@ -136,55 +131,52 @@ export default function Landlords() {
                     <div className="borderQuestion">
                         <div className="row">
                             <div className="col-25">
-                                <Switch
-                                    checked={checked}
-                                    onChange={setChecked}
-                                />
                                 <label htmlFor="contactQuestion">Are you happy to be contacted by prospective
                                     landlords?</label>
+                                <Checkbox/>
                             </div>
                             <div className="col-25">
                             </div>
                         </div>
+                    </div>
+                    {/*----contactQuestion-END--------------------------------------------------------------------------*/}
+
+                    {/*----rentAgainQuestion-START----------------------------------------------------------------------*/}
+                    <div className="borderQuestion">
+                        <div className="row">
+                            <div className="col-25">
+                                <label htmlFor="agencyQuestion">Would you be happy to rent to the tenant
+                                    again?</label>
+                            </div>
+                            <div className="row-25">
+                                <RentAgianController/>
+                            </div>
                         </div>
-                            {/*----contactQuestion-END-------------------------------------------------------------------*/}
+                    </div>
 
-                            {/*----rentAgainQuestion-START---------------------------------------------------------------*/}
-                            <div className="borderQuestion">
-                                <div className="row">
-                                    <div className="col-25">
-                                        <label htmlFor="agencyQuestion">Would you be happy to rent to the tenant
-                                            again?</label>
-                                    </div>
-                                    <div className="row-25">
-                                        <RentAgianController/>
-                                    </div>
-                                </div>
+                    {/*----rentAgainQuestion-END------------------------------------------------------------------------*/}
+
+                    {/*----complaintsQuestion-START---------------------------------------------------------------------*/}
+                    <div className="borderQuestion">
+                        <div className="row">
+                            <div className="col-25">
+                                <label htmlFor="agencyQuestion">Were there any complaints about the tenant from
+                                    neighbours?</label>
                             </div>
-
-                            {/*----rentAgainQuestion-END-----------------------------------------------------------------*/}
-
-                            {/*----complaintsQuestion-START--------------------------------------------------------------*/}
-                            <div className="borderQuestion">
-                                <div className="row">
-                                    <div className="col-25">
-                                        <label htmlFor="agencyQuestion">Were there any complaints about the tenant from
-                                            neighbours?</label>
-                                    </div>
-                                    <div className="row-25">
-                                        <ComplaintsController/>
-                                    </div>
-                                </div>
+                            <div className="row-25">
+                                <ComplaintsController/>
                             </div>
+                        </div>
+                    </div>
 
-                            {/*----complanitsQuestion-END----------------------------------------------------------------*/}
+                    {/*----complanitsQuestion-END-----------------------------------------------------------------------*/}
 
-                            {/*----submitButton-START--------------------------------------------------------------------*/}
-                            <div className="buttonContainer">
-                                <button className="button">Submit</button>
-                            </div>
+                    {/*----submitButton-START---------------------------------------------------------------------------*/}
+                    <div className="buttonContainer">
+                        <button className="button">Submit</button>
+                    </div>
 
-                            {/*----submitButton-END----------------------------------------------------------------------*/}
+                    {/*----submitButton-END-----------------------------------------------------------------------------*/}
                 </form>
             </div>
 
@@ -194,8 +186,6 @@ export default function Landlords() {
 
         </div>
 
-
-);
-
+    );
 }
 

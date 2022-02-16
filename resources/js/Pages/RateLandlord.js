@@ -8,13 +8,11 @@ import CheckboxController from "../Components/ConditionalTextfield";
 import "antd/dist/antd.css";
 import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
-import Switch from "@/Components/Switch";
 import Footer from "@/Components/Footer";
+import Checkbox from "@/Components/Checkbox";
 
 
 export default function Landlords() {
-    const [notes, setNotes] = useState([]);
-    const [checked, setChecked] = useState(false);
     const MapLoader = withScriptjs(Map);
 
 
@@ -49,11 +47,8 @@ export default function Landlords() {
                     {/*----anonQuestion-START---------------------------------------------------------------------------*/}
                     <div className="checkNQuestion">
                         <div className="borderQuestion">
-                            <Switch
-                                checked={checked}
-                                onChange={setChecked}
-                            />
                             <label htmlFor="anonQuestion"> Would you like to submit this form anonymously?</label>
+                            <Checkbox/>
                         </div>
                     </div>
                     {/*----anonQuestion-END-----------------------------------------------------------------------------*/}
@@ -86,7 +81,7 @@ export default function Landlords() {
                             </div>
                             <div className="col-75">
                             <textarea>
-                         Name
+                            Name
                          </textarea>
                             </div>
                         </div>
@@ -135,15 +130,11 @@ export default function Landlords() {
                     <div className="borderQuestion">
                         <div className="row">
                             <div className="col-25">
-                                <Switch
-                                    checked={checked}
-                                    onChange={setChecked}
-                                />
                                 <label htmlFor="contactQuestion">Are you happy to be contacted by prospective tenants
                                     about the property?</label>
                             </div>
                             <div className="col-25">
-                                {/*<CheckboxComponent/>*/}
+                                <Checkbox/>
                             </div>
                         </div>
                     </div>
@@ -154,7 +145,7 @@ export default function Landlords() {
                         <button className="button">Submit</button>
                     </div>
 
-                    {/*----submitButton-END--------------------------------------------------------------------------*/}
+                    {/*----submitButton-END-----------------------------------------------------------------------------*/}
 
 
                 </form>
@@ -162,13 +153,10 @@ export default function Landlords() {
             </body>
 
 
-             <Footer/>
-
-
+            <Footer/>
 
 
         </div>
-
 
 
     );
