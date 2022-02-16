@@ -196,8 +196,6 @@ form.create-note button {
     outline: none;
 }
 
-/* ------------------------------------------------------------------------------- **/
-
 /* Style inputs, select elements and textareas */
 input[type=text], select, textarea{
     width: 100%;
