@@ -9,6 +9,7 @@ import "antd/dist/antd.css";
 import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
 import Switch from "@/Components/Switch";
+import Footer from "@/Components/Footer";
 
 
 export default function Landlords() {
@@ -16,14 +17,6 @@ export default function Landlords() {
     const [checked, setChecked] = useState(false);
     const MapLoader = withScriptjs(Map);
 
-
-    function deleteNote(id) {
-        setNotes(prevNotes => {
-            return prevNotes.filter((noteItem, index) => {
-                return index !== id;
-            });
-        });
-    }
 
     useEffect(() => {
         document.title = "Rate Landlord - Good Rental Homes";
@@ -120,7 +113,6 @@ export default function Landlords() {
                                 key={item.key}
                                 title={item.title}
                                 content={item.content}
-                                star={deleteNote}
                             />))}
                     </div>
                     {/*----ratings-END----------------------------------------------------------------------------------*/}
@@ -168,7 +160,17 @@ export default function Landlords() {
                 </form>
             </div>
             </body>
+
+
+             <Footer/>
+
+
+
+
         </div>
+
+
+
     );
 
 }

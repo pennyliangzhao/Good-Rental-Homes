@@ -11,21 +11,13 @@ import "antd/dist/antd.css";
 import Map from './Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
 import Switch from "@/Components/Switch";
+import Footer from "@/Components/Footer";
 
 
 export default function Landlords() {
     const [notes, setNotes] = useState([]);
     const [checked, setChecked] = useState(false);
     const MapLoader = withScriptjs(Map);
-
-
-    function deleteNote(id) {
-        setNotes(prevNotes => {
-            return prevNotes.filter((noteItem, index) => {
-                return index !== id;
-            });
-        });
-    }
 
 
     useEffect(() => {
@@ -109,7 +101,6 @@ export default function Landlords() {
                                 key={item.key}
                                 title={item.title}
                                 content={item.content}
-                                star={deleteNote}
                             />))}
                     </div>
                     {/*----ratings-END----------------------------------------------------------------------------------*/}
@@ -196,8 +187,14 @@ export default function Landlords() {
                             {/*----submitButton-END----------------------------------------------------------------------*/}
                 </form>
             </div>
+
             </body>
+
+            <Footer/>
+
         </div>
+
+
 );
 
 }
